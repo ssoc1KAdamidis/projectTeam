@@ -1,0 +1,18 @@
+body {
+  background: #ccc;
+
+}
+
+.stats-card-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats-card{
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
