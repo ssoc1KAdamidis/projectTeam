@@ -14,9 +14,10 @@ const StatsList = ({url , resource}) => {
             {isLoading ? (
             <Spin />
             ) : (
-                stats.map(({ id, title, amount }) => (
+                stats.map(({ title, amount }) => (
               <div className="stats-card">  
-                <StatsCard key={id} title={title} amount={amount}/>                     
+                <StatsCard key={title} title={title} amount={amount}/>    
+                               
               </div>   
             )))}     
       </div>

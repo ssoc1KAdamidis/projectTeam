@@ -15,6 +15,7 @@ const useStats = ({url, resource}) => {
             console.log(error)
           });
     }, [url, resource]);
+    
   
     return { stats, isLoading };
   };
