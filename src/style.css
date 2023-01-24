@@ -1,0 +1,22 @@
+body {
+  background: #ccc;
+}
+
+.stats-card-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.stats-card{
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container{
+  display: grid;
+  justify-content: space-between; /* distribute space between elements */
+  grid-template-columns: repeat(2, 1fr); /* create two equal-width columns */
+  flex-direction: column; /* create a column layout */
+  align-items: center; /* align elements vertically */
+}

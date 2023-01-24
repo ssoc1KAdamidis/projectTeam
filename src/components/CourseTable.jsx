@@ -1,8 +1,11 @@
 import React from 'react'
-import { redirect } from "react-router-dom";
-import { Table, Button } from "antd";
+/* import { redirect } from "react-router-dom"; */
+import { Table } from "antd";
+/* import { Button } from "antd"; */
 import useCourses from '../api/useCourses';
 import moment from 'moment';
+import { Link } from 'react-router-dom'; 
+
 
 const CourseTable = ({ url, resource }) => {
   
@@ -41,7 +44,12 @@ const CourseTable = ({ url, resource }) => {
             title: 'Action',
             dataIndex: 'id',
             render: (id) => {
-              return <Button onClick={() => redirect(`${url}/${resource}/:${id}`)}>View Details</Button>
+              /* return <Button onClick={() => redirect(`${url}/${resource}/:${id}`)}>View Details</Button> */
+              return (
+                <Link to="/CoursePage">
+                  <button>View Details</button>
+                  </Link>
+              )
             }          
           }
       ];
