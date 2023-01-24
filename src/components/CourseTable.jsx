@@ -1,5 +1,4 @@
 import React from 'react'
-/* import { redirect } from "react-router-dom"; */
 import { Table } from "antd";
 /* import { Button } from "antd"; */
 import useCourses from '../api/useCourses';
@@ -46,7 +45,7 @@ const CourseTable = ({ url, resource }) => {
             render: (id) => {
               /* return <Button onClick={() => redirect(`${url}/${resource}/:${id}`)}>View Details</Button> */
               return (
-                <Link to="/CoursePage">
+                <Link to={`courses/${id}`} >
                   <button>View Details</button>
                   </Link>
               )

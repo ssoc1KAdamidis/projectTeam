@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import Courses from "./views/Courses";
 import NewCourse from "./views/NewCourse";
+import CoursePage from "./views/CoursePage"
 
 const router = createBrowserRouter([
     {
@@ -14,9 +15,13 @@ const router = createBrowserRouter([
       element: <Courses />,
     },
     {
+      path: "courses/:id",
+      element: <CoursePage />
+    },
+    {
       path: "new",
       element: <NewCourse />,
-    },
+    }
   ]);
   
   export default router;
