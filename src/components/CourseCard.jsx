@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 
 const CourseCard = ({id, title, price, duration, online, dates, imagePath}) => {
    
-    const pic = `${imagePath}`
     // console.log(data.title)
     return (
         
@@ -20,7 +19,7 @@ const CourseCard = ({id, title, price, duration, online, dates, imagePath}) => {
         style={{
             width: "", 
           }} 
-        cover={<img alt="example" src={pic} />}>
+        cover={<img alt="example" src={imagePath} />}>
         <p>Price: <b>{price.normal}</b>&euro; | Online: {online ? <span>&#10003;</span> : <span>&#88;</span> }</p>
         <p>Duration: <b>{duration}</b></p>
         <p>Dates: <b> {moment(dates.start_date).format("DD/MM/YYYY")} - {moment(dates.end_date).format("DD/MM/YYYY")}   </b></p>
