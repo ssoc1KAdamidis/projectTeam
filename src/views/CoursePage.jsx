@@ -2,6 +2,8 @@ import React from 'react'
 import NavBar from "../components/NavBar";
 import { useParams } from 'react-router';
 import useCourses from '../api/useCourses';
+import { Spin } from 'antd';
+// import moment from 'moment';
 
 
 const CoursePage = () => {
@@ -10,26 +12,36 @@ const CoursePage = () => {
         {
           url: "http://localhost:3001",
            resource: "courses",
-        //    id: {id}
            id
         },
     )
 
-
-    return (  
+    const {description, title, imagePath, price, online, duration, dates } = data.courses;
+    return data.isLoading ?  <Spin />:  (  
    <> 
    <NavBar />
    <br />
-   <br />
     <div>
-    <b>{data.courses.title}</b>
+    <h2><b>{title}</b></h2>
     </div>
     <br />
     <br />
+    <div>
+    <img src={imagePath} alt="" width="60%" align="center" />
+    </div>
+    <hr />
+    <br />
     <br />
     <div>
-    <img src={data.courses.imagePath} alt="" width="50%" align="center" />
+       <b>{description}</b> 
     </div>
+    <br />
+    <p><b>Price: {price.normal} <span>&euro;</span></b></p>
+    <p><b>Online: <span>{online ? <span>&#10003;</span> : <span>&#88;</span>}</span></b></p>
+    <p><b>Duration: {duration}</b></p>
+    <p><b>Dates: <span>{dates.start_date} - {dates.end_date}</span></b></p>
+        <button>Edit</button>
+        <button>Delete</button>
     </>
     )
 }

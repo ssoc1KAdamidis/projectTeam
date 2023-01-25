@@ -14,9 +14,17 @@ body {
 }
 
 .container{
-  display: grid;
-  justify-content: space-between; /* distribute space between elements */
-  grid-template-columns: repeat(2, 1fr); /* create two equal-width columns */
-  flex-direction: column; /* create a column layout */
-  align-items: center; /* align elements vertically */
+  text-align: center;
+  display: grid;  
+  height: 300px;
+  margin-top: 140px;
+  width: 280px;
+  float: left;
+  margin-left: 12px;
+}
+
+
+
+#error-page{
+  text-align: center;
 }

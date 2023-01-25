@@ -17,11 +17,10 @@ const Courses = () => {
     return (
     <>
     <NavBar /> 
-    {data.courses.map(({title, dates, id, price, online, duration, imagePath}) => {
+    {data.courses.map(({title, dates, id, price, online, duration, imagePath }) => {
       return ( 
-      <div class="container">
+      <div className="container" key= {id}>
       <CourseCard 
-      key={id}
       id = {id}
       title={title} 
       price={price}  
@@ -29,6 +28,7 @@ const Courses = () => {
       online={online}
       dates = {dates}  
       imagePath = {imagePath}
+      
       />  
       </div>
       )  

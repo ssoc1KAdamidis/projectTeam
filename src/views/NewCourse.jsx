@@ -56,7 +56,7 @@ const AddNewCourse = () => {
       <label>
         Price:
         <input
-          type="int"
+          type="number"
           name="price"
           value={inputValues.price}
           onChange={handleInputChange}

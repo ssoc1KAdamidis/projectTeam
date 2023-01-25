@@ -43,7 +43,6 @@ const CourseTable = ({ url, resource }) => {
             title: 'Action',
             dataIndex: 'id',
             render: (id) => {
-              /* return <Button onClick={() => redirect(`${url}/${resource}/:${id}`)}>View Details</Button> */
               return (
                 <Link to={`courses/${id}`} >
                   <button>View Details</button>
