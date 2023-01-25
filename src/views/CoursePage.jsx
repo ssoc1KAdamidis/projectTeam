@@ -16,13 +16,22 @@ const CoursePage = () => {
     )
 
 
-    return(  
+    return (  
    <> 
    <NavBar />
-    <div><img src={data.courses.imagePath} alt="" /></div>
- 
+   <br />
+   <br />
+    <div>
+    <b>{data.courses.title}</b>
+    </div>
+    <br />
+    <br />
+    <br />
+    <div>
+    <img src={data.courses.imagePath} alt="" width="50%" align="center" />
+    </div>
     </>
     )
 }
 
-export default CoursePage
+export default CoursePage;
