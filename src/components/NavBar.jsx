@@ -8,13 +8,13 @@ import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Navbar className='Navbar' bg="dark" variant='dark' expand="lg">
-        <Navbar.Brand as={Link} to="/" style={{margin: "10px"}}>Dashboard</Navbar.Brand>
+    <Navbar className='Navbar' style={{backgroundColor: "rgba(0, 0, 0, 0.15)", color: "black", fontSize: "small", fontWeight: "bold" }} expand="lg"> 
+        <Navbar.Brand as={Link} to="/" style={{margin: "5px"}}>Dashboard</Navbar.Brand> {/*not working as we want */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/courses">Courses</Nav.Link>
-            <Nav.Link as={NavLink} to="/new">Add New Course</Nav.Link>
+            <Nav.Link as={NavLink} to="/courses" style={{margin: "5px", color: "black"}}>Courses</Nav.Link>
+            <Nav.Link as={NavLink} to="/new" style={{margin: "5px", color: "black"}}>Add New Course</Nav.Link>
           </Nav>
         </Navbar.Collapse>
     </Navbar>

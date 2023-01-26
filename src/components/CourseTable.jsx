@@ -46,7 +46,7 @@ const CourseTable = ({ url, resource }) => {
               return (
                 <Link to={`courses/${id}`} >
                   <button>View Details</button>
-                  </Link>
+                  </Link> 
               )
             }          
           }

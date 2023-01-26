@@ -17,3 +17,6 @@ export async function postCourse(formData) {
   const data = await res.json();
   return data;
 }
+
+/* delete ? */
+/* edit ? */

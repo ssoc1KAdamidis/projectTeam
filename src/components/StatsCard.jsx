@@ -7,7 +7,7 @@ const StatsCard = ({ id, title, amount }) => {
     return (
         <div className="stats-card">  
         <Card  size="small" bordered={false} key={id}>                     
-            {title}: <Button size='small' type="primary" style={{marginRight: "65px"}}>{amount}</Button>
+            {title}: <Button size='small' type="primary" style={{marginRight: "65px", backgroundColor: "#ccc"}}>{amount}</Button>
         </Card>
         </div>                
     );

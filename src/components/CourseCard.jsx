@@ -7,8 +7,7 @@ const CourseCard = ({id, title, price, duration, online, dates, imagePath}) => {
    
     // console.log(data.title)
     return ( 
-      <Card
-        hoverable
+      <Card 
         title= {title} 
         cover={<img alt="example" src={imagePath} />}>
         <p>Price: <b>{price.normal}</b>&euro; | Online: {online ? <span>&#10003;</span> : <span>&#88;</span> }</p>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import React from 'react'
 import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
+/* import { prepareDatesForm } from '../utilities/form.jsx'; */
 import { postCourse } from "../api/fetch.jsx";
 
 
@@ -27,8 +28,10 @@ import { postCourse } from "../api/fetch.jsx";
 
   const handleInput = (e) => {
   const formData = prepareCourseForm(form, e.target);
+  /* const formDates = prepareDatesForm(form, e.target); */
 
   setForm(formData);
+  /* setForm(formDates); */
   };
 
   const handleSubmit = async (e) => {
@@ -37,13 +40,28 @@ import { postCourse } from "../api/fetch.jsx";
     await postCourse(form);
     // TODO: redirect to courses path
   };
+
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheckboxChange = (e) => {
+    setIsChecked(e.target.checked);
+  }
   
+
+  const [file, setFile] = useState(null);
+  const handleChange = (e) => {
+  setFile(e.target.files[0]);
+  /* return (
+    {file && <p>{file.name}</p>}
+  ) */
+  }
+
+/* export FileInput */
 
  return (
   <>
     <NavBar />
     <br />  
-    <h5><b>Add a new Course</b></h5>
+    <h1><b>Add a new Course</b></h1>
     <br />
     <br />
     <form onSubmit={handleSubmit}>
@@ -101,7 +119,6 @@ import { postCourse } from "../api/fetch.jsx";
        onChange={handleInput}
        />
       </label>
-      {/* switch ? */}
       <br />
       <br />
       <br />
@@ -132,9 +149,10 @@ import { postCourse } from "../api/fetch.jsx";
         Online:
         <input
           type="checkbox"
+          checked={isChecked}
           name="online"
           value={online}
-          onChange={handleInput}
+          onChange={handleCheckboxChange}
         />
         </label>
         <br />
@@ -146,52 +164,17 @@ import { postCourse } from "../api/fetch.jsx";
           type="file"
           name="image"
           value={image}
-          onChange={handleInput}
-        />
+          accept="image/*"
+          onChange={handleChange}
+          />        
       </label>
       <br />
       <br />
       <br />
-      <button type="submit">Add new Course</button>
+      <button type="submit">Add new Course <img src='./add.avif' alt="add" width='15px'/></button>
     </form>
     </>
   );
 };
 
 export default NewCourse;
-
-
-/* image uploader 
-
-import React, { useState } from 'react';
-
-function FileInput() {
-  const [file, setFile] = useState(null);
-
-  const handleChange = (event) => {
-    setFile(event.target.files[0]);
-  };
-
-  return (
-    <div>
-      <input type="file" onChange={handleChange} />
-      {file && <p>{file.name}</p>}
-    </div>
-  );
-}
-
-export FileInput;
-
-You can also use libraries such as react-dropzone or react-dropzone-uploader for more advanced file input with image preview and other functionalities.
-
-*/
-
-/* online boolean 
-
-const [checkboxValue, setCheckboxValue] = useState(false);
-
-return (
-  <input type="checkbox" checked={checkboxValue} onChange={e => setCheckboxValue(e.target.checked)} />
-);
-
-*/

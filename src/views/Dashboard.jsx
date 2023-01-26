@@ -10,7 +10,7 @@ const Dashboard = () => {
     return (
     <>
     <NavBar />
-    <Title style={{fontSize: "50px", margin: "50px"}}>Welcome to our Dashboard</Title>
+    <Title style={{fontSize: "25px", fontStyle: "bold", fontFamily: 'Courier new', margin: "50px"}}>Welcome to our Dashboard</Title>
     <div>
       <StatsList url="http://localhost:3001" resource="stats" />
       <br></br>

@@ -9,3 +9,18 @@ export function prepareCourseForm(form, target) {
       return { ...form, [name]: value };
   }
 }
+
+/*
+export function prepareDatesForm(form, target) {
+  const { name, value } = target;
+  switch (name) {
+    case "start_date":
+      return { ...form, dates: { ...form.dates, start_date: Date(value) } };
+    case "end_date":
+      return { ...form, dates: { ...form.dates, end_date: Date(value) } };
+    default:
+      return { ...form, [name]: value };
+  }
+}
+*/
+/* working? */

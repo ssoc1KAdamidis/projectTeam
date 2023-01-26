@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import { useParams } from 'react-router';
 import useCourses from '../api/useCourses';
 import { Spin } from 'antd';
+import Link from 'antd/es/typography/Link';
 // import moment from 'moment';
 
 
@@ -40,10 +41,23 @@ const CoursePage = () => {
     <p><b>Online: <span>{online ? <span>&#10003;</span> : <span>&#88;</span>}</span></b></p>
     <p><b>Duration: {duration}</b></p>
     <p><b>Dates: <span>{dates.start_date} - {dates.end_date}</span></b></p>
-        <button>Edit</button>
-        <button>Delete</button>
+    <div>
+    <Link to={`edit/${id}`} > {/* not working */}
+    <button> Edit <img src='/edit.avif' alt="edit" width='15px'/></button>
+    </Link>
+    </div>
+    <br />
+    <div>
+    <button onClick={() => handleDelete(id)}> Delete <img src='/delete.avif' alt="delete" width='15px'/></button>
+    </div>
+    
     </>
     )
 }
+
+const handleDelete = (id) => {
+/* delete course from courses */
+}
+
 
 export default CoursePage;

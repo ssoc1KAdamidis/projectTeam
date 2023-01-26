@@ -40,10 +40,10 @@
     },
     {
       "id": "02",
-      "title": "Excel Plus",
+      "title": "Εισαγωγή στο Excel Plus",
       "imagePath": "/courses/excel.jpg",
       "price": {
-        "normal": 400,
+        "normal": 300,
         "early_bird": 200
       },
       "dates": {
@@ -60,7 +60,7 @@
       "imagePath": "/courses/internet.jpg",
       "price": {
         "early_bird": 500,
-        "normal": 300
+        "normal": 200
       },
       "dates": {
         "start_date": "2023-02-10",
@@ -76,7 +76,7 @@
       "imagePath": "/courses/canva.jpg",
       "price": {
         "early_bird": 800,
-        "normal": 400
+        "normal": 300
       },
       "dates": {
         "start_date": "2023-02-15",
@@ -89,7 +89,7 @@
     {
       "title": "Εισαγωγή στη React",
       "description": "Εισαγωγή στη React",
-      "duration": "1 month",
+      "duration": "3 months",
       "price": {
         "early_bird": 50,
         "normal": 100
@@ -101,6 +101,38 @@
       },
       "image": "C:\\fakepath\\-.jpg",
       "id": "eCsag11"
+    },
+    {
+      "title": "Εισαγωγή στη React 1",
+      "description": "edit",
+      "duration": "3 months",
+      "price": {
+        "early_bird": 50,
+        "normal": 100
+      },
+      "online": "",
+      "dates": {
+        "start_date": "",
+        "end_date": ""
+      },
+      "image": "",
+      "id": "wnNjPw_"
+    },
+    {
+      "title": "Εισαγωγή στη React 2",
+      "description": "delete",
+      "duration": "3 months",
+      "price": {
+        "early_bird": 50,
+        "normal": 100
+      },
+      "online": "",
+      "dates": {
+        "start_date": "",
+        "end_date": ""
+      },
+      "image": "",
+      "id": "TzqCqJC"
     }
   ]
 }

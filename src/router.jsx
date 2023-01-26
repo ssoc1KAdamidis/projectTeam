@@ -3,7 +3,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import Courses from "./views/Courses";
 import NewCourse from "./views/NewCourse";
-import CoursePage from "./views/CoursePage"
+import EditCourse from "./views/EditCourse";
+import CoursePage from "./views/CoursePage";
 import ErrorPage from './views/ErrorPage';
 
 const router = createBrowserRouter([
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
     {
       path: "new",
       element: <NewCourse />,
+      errorElement: <ErrorPage/>,
+    },
+    {
+      path: "edit",
+      element: <EditCourse />,
       errorElement: <ErrorPage/>,
     }
   ]);

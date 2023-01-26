@@ -1,16 +1,33 @@
 body {
   background: #ccc;
+  text-align: center;
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+  margin-left: 25px; /* not working */
+  margin-right: 25px; /* not working */
+  width: 50%; /* not working */
+  background-color:white;
+  text-align: center;
+  font-size: small;
+  font-family:'Courier New', Courier, monospace
 }
 
 .stats-card-container{
   display: flex;
   justify-content: space-evenly;
+  font-size: small;
+  font-family:'Courier New', Courier, monospace;
 }
 
 .stats-card{
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: small;
+  font-family:'Courier New', Courier, monospace;
 }
 
 .container{
@@ -21,10 +38,130 @@ body {
   width: 280px;
   float: left;
   margin-left: 12px;
+  font-size: small;
+  font-family:'Courier New', Courier, monospace;
 }
-
-
 
 #error-page{
   text-align: center;
 }
+
+* {
+  font-size: small;
+  font-family:'Courier New', Courier, monospace;
+}
+
+input {
+  width: 100%;
+  border: 1px solid;
+  border-color:rgba(0, 0, 0, 0.15);
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  accent-color: inherit;
+}
+
+textarea {
+  width: 100%;
+  border: 1px solid;
+  border-color:rgba(0, 0, 0, 0.15);
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+}
+
+select {
+  width: 100%;
+  border: none;
+  background-color:rgba(0, 0, 0, 0.15); 
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  color:black;
+  accent-color:inherit;
+}
+
+button {
+  width: 100px;
+  overflow: hidden;
+  border: none;
+  background-color:rgba(0, 0, 0, 0.15); 
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  color: "black";
+}
+
+h1, h3 {
+  margin: 10px;
+}
+
+p {
+  margin: 10px;   
+}
+
+a:hover, a:active {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  color: black;
+}
+
+a {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  color: "black";
+}
+
+a:link, a:visited {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+  color: black;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+input[type='checkbox'] {
+  accent-color: black;
+}
+
+/*
+input[type='date'] .selected {
+  accent-color: #ccc;
+  background-color: #ccc;
+}
+*/
+
+/*
+input[type="date"] .select {
+  accent-color: #ccc;
+  background-color: #ccc;
+}
+*/
+
+/*
+input[type="date"] .focus {
+  accent-color: #ccc;
+  background-color: #ccc;
+  color: #ccc;
+}
+*/
+
+/*
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #ccc;
+}
+*/
+
+/*
+.date-edit-field:not([disabled="true"]):focus {
+  background-color: black;
+  color: HighlightText;
+  outline: none;
+}
+*/
+
+/* color in date picker not working */
