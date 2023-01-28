@@ -62,8 +62,8 @@ const CoursePage = () => {
         </b>
       </p>
       <div>
-        <Link to={`edit/${id}`}>
-          {/* not working */}
+      <Link to={`edit/${id}`}>
+        {/* not working */}
           <button>
             Edit <img src="/edit.avif" alt="edit" width="15px" />
           </button>
@@ -72,7 +72,7 @@ const CoursePage = () => {
       <br />
       <div>
         <button onClick={() => handleDelete(id)}>
-          {" "}
+          { /* {" "} */ }
           Delete <img src="/delete.avif" alt="delete" width="15px" />
         </button>
       </div>

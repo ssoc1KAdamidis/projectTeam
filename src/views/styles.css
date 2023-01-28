@@ -1,0 +1,32 @@
+::-webkit-calendar-picker-indicator:hover {
+       cursor: pointer;
+     }
+     .datepicker {
+       display: grid;
+       position: relative;
+       width: max-content;
+     }
+     
+     input[type='date'] {
+       position: relative;
+       border: 1px solid;
+       border-radius: 0.2rem;
+       padding: 0.2rem 0.2rem 0.2rem 0.4rem;
+     }
+     
+     input[type='date'] ~ button {
+       margin-left: auto;
+       position: absolute;
+       right: 1.8rem;
+       align-self: center;
+       text-align: center;
+       background: none;
+       border: none;
+       border-radius: 50%;
+       cursor: pointer;
+       color: rgb(170, 170, 170);
+     }
+     
+     input[type='date'] ~ button:hover {
+       color: rgb(90, 90, 90);
+     }

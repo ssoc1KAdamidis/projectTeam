@@ -36,14 +36,15 @@ const CourseTable = ({ url, resource }) => {
       title: "Date",
       dataIndex: "dates",
       render: (value) => {
-        return (
-          <span>
-            {moment(value.start_date).format("DD/MM/YYYY")} -
-            {moment(value.end_date).format("DD/MM/YYYY")}
-          </span>
-        );
+      return <span>{moment(value.start_date).format("DD/MM/YYYY")} - {moment(value.end_date).format("DD/MM/YYYY")}</span>
+      /*
+      <span>
+      {moment(value.start_date).format("DD/MM/YYYY")} -
+      {moment(value.end_date).format("DD/MM/YYYY")}
+      </span>
+      */
+      }
       },
-    },
     {
       title: "Action",
       dataIndex: "id",

@@ -4,8 +4,10 @@ import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
-import { Link } from 'react-router-dom';
+import App from './DatePicker';
 
+/* import { Link } from 'react-router-dom'; */
+/* import { Navigate } from 'react-router-dom'; */
 
 
   const NewCourse = () => {
@@ -29,7 +31,8 @@ import { Link } from 'react-router-dom';
 
   const handleInput = (e) => {
   const formData = prepareCourseForm(form, e.target);
-setForm(formData);}
+  setForm(formData);
+};
 
   const handleInput2 = (e) => {
     const formDates = prepareDatesForm(form, e.target); 
@@ -40,10 +43,8 @@ setForm(formData);}
     e.preventDefault();
     form.online = isChecked;
     await postCourse(form);
-    // TODO: redirect to courses path
-  };
-
-  
+    /* redirect to courses */
+  }
 
   const [isChecked, setIsChecked] = useState(false);
   const handleCheckboxChange = (e) => {
@@ -56,14 +57,13 @@ setForm(formData);}
   setFile(e.target.files[0]);
   /* return (
     {file && <p>{file.name}</p>}
-  ) */
-  }
+  ) */ 
+}
 
-/* export FileInput */
-// console.log(form)
+
  return (
   <>
-     {/* {console.log(form.dates)} */}
+
  <NavBar />
     <br />  
     <h1><b>Add a new Course</b></h1>
@@ -110,17 +110,24 @@ setForm(formData);}
        Dates:
        <br />
        <label htmlFor="start_date">Start Date:</label>
-       <input 
+       <App 
+       input 
        name="start_date"
        type="date"
+       min="2023-02-01"
+       max="2031-02-01"
        value={start_date}
        onChange={handleInput2}
        />
-       
+       <br />
+       <br />
        <label htmlFor="end">End Date:</label>
-       <input 
+       <App 
+       input 
        name="end_date"
        type="date"
+       min="2023-02-01"
+       max="2031-02-01"
        value={end_date}
        onChange={handleInput2}
        />

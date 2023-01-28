@@ -3,14 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bcad1591/react-date-picker": "^0.1.1",
     "antd": "^5.1.6",
     "bootstrap": "^5.2.3",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
+    "react-datepicker": "^4.8.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.6.2",
-    "react-scripts": "5.0.1"
+    "react-hook-form": "^7.42.1",
+    "react-redirect": "^1.0.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "react-tailwindcss-datepicker": "^1.4.1",
+    "redirect": "^0.2.0"
   },
   "devDependencies": {
     "json-server": "^0.17.1"
