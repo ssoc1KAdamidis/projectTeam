@@ -10,7 +10,7 @@ export function prepareCourseForm(form, target) {
   }
 }
 
-/*
+
 export function prepareDatesForm(form, target) {
   const { name, value } = target;
   switch (name) {
@@ -22,5 +22,3 @@ export function prepareDatesForm(form, target) {
       return { ...form, [name]: value };
   }
 }
-*/
-/* working? */

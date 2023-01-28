@@ -2,8 +2,9 @@ import { useState } from 'react';
 import React from 'react'
 import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
-/* import { prepareDatesForm } from '../utilities/form.jsx'; */
+import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
+import { Link } from 'react-router-dom';
 
 
 
@@ -19,7 +20,7 @@ import { postCourse } from "../api/fetch.jsx";
     online: '',
     dates: {
       start_date: '',
-      end_date: ''
+      end_date: '',
     },
     image: ''
   });
@@ -28,18 +29,21 @@ import { postCourse } from "../api/fetch.jsx";
 
   const handleInput = (e) => {
   const formData = prepareCourseForm(form, e.target);
-  /* const formDates = prepareDatesForm(form, e.target); */
+setForm(formData);}
 
-  setForm(formData);
-  /* setForm(formDates); */
+  const handleInput2 = (e) => {
+    const formDates = prepareDatesForm(form, e.target); 
+    setForm({...form, ...formDates}); 
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    form.online = isChecked;
     await postCourse(form);
     // TODO: redirect to courses path
   };
+
+  
 
   const [isChecked, setIsChecked] = useState(false);
   const handleCheckboxChange = (e) => {
@@ -56,10 +60,11 @@ import { postCourse } from "../api/fetch.jsx";
   }
 
 /* export FileInput */
-
+// console.log(form)
  return (
   <>
-    <NavBar />
+     {/* {console.log(form.dates)} */}
+ <NavBar />
     <br />  
     <h1><b>Add a new Course</b></h1>
     <br />
@@ -109,14 +114,15 @@ import { postCourse } from "../api/fetch.jsx";
        name="start_date"
        type="date"
        value={start_date}
-       onChange={handleInput}
+       onChange={handleInput2}
        />
+       
        <label htmlFor="end">End Date:</label>
        <input 
        name="end_date"
        type="date"
        value={end_date}
-       onChange={handleInput}
+       onChange={handleInput2}
        />
       </label>
       <br />
@@ -133,7 +139,7 @@ import { postCourse } from "../api/fetch.jsx";
               value={early_bird}
               onChange={handleInput}
             />
-            <label htmlFor="normal">Normal bird price:</label>
+            <label htmlFor="normal">Normal price:</label>
             <input
               id="normal"
               name="normal"
@@ -171,10 +177,12 @@ import { postCourse } from "../api/fetch.jsx";
       <br />
       <br />
       <br />
-      <button type="submit">Add new Course <img src='./add.avif' alt="add" width='15px'/></button>
+      <button type="submit">Add new Course<img src='./add.avif' alt="add" width='15px'/></button>
     </form>
     </>
+    
   );
 };
+
 
 export default NewCourse;
