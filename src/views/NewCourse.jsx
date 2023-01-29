@@ -5,9 +5,8 @@ import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
 import App from './DatePicker';
-
+import axios from 'axios';
 /* import { Link } from 'react-router-dom'; */
-/* import { Navigate } from 'react-router-dom'; */
 
 
   const NewCourse = () => {
@@ -43,23 +42,21 @@ import App from './DatePicker';
     e.preventDefault();
     form.online = isChecked;
     await postCourse(form);
-    /* redirect to courses */
+    window.location.href = '/courses';   
   }
 
   const [isChecked, setIsChecked] = useState(false);
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
   }
-  
 
-  const [file, setFile] = useState(null);
-  const handleChange = (e) => {
-  setFile(e.target.files[0]);
-  /* return (
-    {file && <p>{file.name}</p>}
-  ) */ 
-}
-
+    const [selectedFile, setSelectedFile] = useState(null);
+    const handleChange = (e) => {
+      setSelectedFile(e.target.image);
+      const formData = new FormData();
+      formData.append('image', selectedFile);
+      axios.post('/server/upload', formData)
+    }
 
  return (
   <>
@@ -185,11 +182,10 @@ import App from './DatePicker';
       <br />
       <br />
       <button type="submit">Add new Course<img src='./add.avif' alt="add" width='15px'/></button>
-    </form>
-    </>
+      </form>
+      </>
     
   );
 };
-
 
 export default NewCourse;

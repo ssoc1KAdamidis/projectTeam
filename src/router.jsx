@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       errorElement: <ErrorPage/>,
     },
     {
-      path: "edit",
+      path: "edit/:id",
       element: <EditCourse />,
       errorElement: <ErrorPage/>,
     }

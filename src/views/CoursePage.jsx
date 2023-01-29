@@ -3,8 +3,11 @@ import NavBar from "../components/NavBar";
 import { useParams } from "react-router";
 import useCourses from "../api/useCourses";
 import { Spin } from "antd";
-import Link from "antd/es/typography/Link";
-// import moment from 'moment';
+import { Link } from "react-router-dom";
+/* import Link from "antd/es/typography/Link";*/
+/* import { deleteCourse } from "../api/fetch.jsx"; */
+/* import moment from 'moment'; */
+
 
 const CoursePage = () => {
   let { id } = useParams();
@@ -62,26 +65,25 @@ const CoursePage = () => {
         </b>
       </p>
       <div>
-      <Link to={`edit/${id}`}>
-        {/* not working */}
-          <button>
-            Edit <img src="/edit.avif" alt="edit" width="15px" />
-          </button>
-        </Link>
+     <Link to={`/edit/${id}`}>
+      <button>Edit <img src="/edit.avif" alt="edit" width="15px" /></button>
+      </Link>
       </div>
       <br />
       <div>
-        <button onClick={() => handleDelete(id)}>
-          { /* {" "} */ }
-          Delete <img src="/delete.avif" alt="delete" width="15px" />
+        {/*<button onClick={handleDelete}>Delete <img src="/delete.avif" alt="delete" width="15px" />*/}
+        <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="delete" width="15px" />
         </button>
       </div>
     </>
   );
 };
 
-const handleDelete = (id) => {
-  /* delete course from courses */
+
+async function handleDelete(id) {
+/* await deleteCourse(id); */
+window.location.href = '/courses';  
 };
+
 
 export default CoursePage;
