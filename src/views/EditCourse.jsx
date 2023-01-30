@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
-import { editCourse } from "../api/fetch.jsx";
+import { editCourse } from "../api/fetch.jsx"; 
 import App from './DatePicker';
+import axios from 'axios';
   
 
   const EditForm = () => {
@@ -25,16 +26,13 @@ import App from './DatePicker';
     
  const { title, description, duration, online, image, dates: { start_date, end_date }, price: { early_bird, normal }, } = formValues;
  
-    /*
     const handleEdit = (e) => {
-        setFormValues({
-            ...formValues,
-            [e.target.name]: e.target.value
-        });
-    }
+    /* setFormValues({
+    ...formValues,
+    [e.target.name]: e.target.value
+    });
     */
 
-    const handleEdit = (e) => {
     const formData = prepareCourseForm(formValues, e.target);
     setFormValues(formData);
     };
@@ -44,11 +42,14 @@ import App from './DatePicker';
     setFormValues({...formValues, ...formDates});
     };
   
-   const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
     e.preventDefault();
     formValues.online = isChecked;
-    await editCourse(formValues);
-    window.location.href = '/courses';
+    await editCourse(formValues); 
+    /* axios.patch('/http://localhost:3001/courses/:id', {
+      formValues: setFormValues }) */
+    /* axios.patch ('http://localhost:3001/courses/:id', formValues); */
+    /* window.location.href = '/courses'; */ /* not working here */
     }
 
   const [isChecked, setIsChecked] = useState(false);
@@ -57,8 +58,18 @@ import App from './DatePicker';
   }
 
   const [selectedFile, setSelectedFile] = useState(null);
-  const handleChange = (e) => {
-    setSelectedFile(e.target.files[0]);
+  const handleChange = async (e) => {
+    setSelectedFile(e.target.image[0]);
+    const formData = new FormData();
+    formData.append('image', selectedFile);
+    <button onClick={handleUpload}>Upload</button>
+    /*return selectedFile.name;*/
+  }
+
+    const handleUpload = async (e) => {
+    const formData = new FormData();
+    /*await*/ axios.post('/courses/{$id}/', formData)
+    /*await fetch('/courses/{$id}/', formData)*/
   }
 
     return (

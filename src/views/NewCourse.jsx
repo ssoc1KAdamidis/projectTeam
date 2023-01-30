@@ -51,11 +51,18 @@ import axios from 'axios';
   }
 
     const [selectedFile, setSelectedFile] = useState(null);
-    const handleChange = (e) => {
-      setSelectedFile(e.target.image);
-      const formData = new FormData();
-      formData.append('image', selectedFile);
-      axios.post('/server/upload', formData)
+    const handleChange = async (e) => {
+    setSelectedFile(e.target.image[0]);
+    const formData = new FormData();
+    formData.append('image', selectedFile);
+    <button onClick={handleUpload}>Upload</button>
+    /*return selectedFile.name;*/
+    }
+
+    const handleUpload = async (e) => {
+    const formData = new FormData();
+    /*await*/ axios.post('/courses/{$id}/', formData)
+    /*await fetch('/courses/{$id}/', formData)*/
     }
 
  return (

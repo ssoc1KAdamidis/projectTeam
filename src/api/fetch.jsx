@@ -21,18 +21,21 @@ export async function postCourse(formData) {
 }
 
 export async function editCourse(formValues) {
-  const res = await fetch("http://localhost:3001/courses/", {
-    method: "POST",
+
+  /*const res = await axios.patch('http://localhost:3001/courses/:id', */
+    const res = await fetch("http://localhost:3001/courses/", {
+    method: "POST", 
     body: JSON.stringify(formValues),
     headers: { "Content-Type": "application/json" },
   });
+  window.location.href = '/courses'; /* working here */
   const data = await res.json();
   return data;
-  
 }
 
 export async function deleteCourse(id) {
-    const res = await axios.delete(`/courses/${id}`);
+    const res = await axios.delete(`http://localhost:3001/courses/${id}`);
+    window.location.href = '/courses'; /* working here */
     const data = await res.json();
     return data;
 }

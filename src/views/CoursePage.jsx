@@ -5,7 +5,7 @@ import useCourses from "../api/useCourses";
 import { Spin } from "antd";
 import { Link } from "react-router-dom";
 /* import Link from "antd/es/typography/Link";*/
-/* import { deleteCourse } from "../api/fetch.jsx"; */
+import { deleteCourse } from "../api/fetch.jsx";
 /* import moment from 'moment'; */
 
 
@@ -71,9 +71,7 @@ const CoursePage = () => {
       </div>
       <br />
       <div>
-        {/*<button onClick={handleDelete}>Delete <img src="/delete.avif" alt="delete" width="15px" />*/}
-        <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="delete" width="15px" />
-        </button>
+        <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="delete" width="15px" /></button>
       </div>
     </>
   );
@@ -81,8 +79,8 @@ const CoursePage = () => {
 
 
 async function handleDelete(id) {
-/* await deleteCourse(id); */
-window.location.href = '/courses';  
+await deleteCourse(id)
+window.location.href = '/courses';  /* not working here */
 };
 
 

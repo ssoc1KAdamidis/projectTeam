@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm }  from 'react-hook-form'
-import CustomDatepicker from './CustomDatePicker'; 
+import CustomDatepicker from './CustomDatePicker';
 import './styles.css';
 
 

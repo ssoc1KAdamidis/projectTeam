@@ -103,36 +103,20 @@
       "id": "eCsag11"
     },
     {
-      "title": "Εισαγωγή στη React 1",
-      "description": "edit",
-      "duration": "3 months",
+      "title": "117",
+      "description": "",
+      "duration": "",
       "price": {
-        "early_bird": 50,
-        "normal": 100
+        "early_bird": 0,
+        "normal": 0
       },
-      "online": "",
+      "online": true,
       "dates": {
         "start_date": "",
         "end_date": ""
       },
       "image": "",
-      "id": "wnNjPw_"
-    },
-    {
-      "title": "Εισαγωγή στη React 2",
-      "description": "delete",
-      "duration": "3 months",
-      "price": {
-        "early_bird": 50,
-        "normal": 100
-      },
-      "online": "",
-      "dates": {
-        "start_date": "",
-        "end_date": ""
-      },
-      "image": "",
-      "id": "TzqCqJC"
+      "id": "qLsRv2p"
     }
   ]
 }
