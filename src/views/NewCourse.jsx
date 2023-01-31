@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
-import App from './DatePicker';
+/* import App from './DatePicker'; */
 import axios from 'axios';
 /* import { Link } from 'react-router-dom'; */
 
@@ -31,12 +31,19 @@ import axios from 'axios';
   const handleInput = (e) => {
   const formData = prepareCourseForm(form, e.target);
   setForm(formData);
+
+  const formDates = prepareDatesForm(form, e.target); 
+  setForm({...form, ...formDates}); 
+
 };
 
+  
+  /*
   const handleInput2 = (e) => {
-    const formDates = prepareDatesForm(form, e.target); 
-    setForm({...form, ...formDates}); 
+  const formDates = prepareDatesForm(form, e.target); 
+  setForm({...form, ...formDates}); 
   };
+*/
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -114,26 +121,24 @@ import axios from 'axios';
        Dates:
        <br />
        <label htmlFor="start_date">Start Date:</label>
-       <App 
-       input 
+       <input 
        name="start_date"
        type="date"
        min="2023-02-01"
        max="2031-02-01"
        value={start_date}
-       onChange={handleInput2}
+       onChange={handleInput}
        />
        <br />
        <br />
        <label htmlFor="end">End Date:</label>
-       <App 
-       input 
+       <input 
        name="end_date"
        type="date"
        min="2023-02-01"
        max="2031-02-01"
        value={end_date}
-       onChange={handleInput2}
+       onSelect={handleInput}
        />
       </label>
       <br />
