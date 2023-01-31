@@ -15,9 +15,9 @@ export function prepareDatesForm(form, target) {
   const { name, value } = target;
   switch (name) {
     case "start_date":
-      return { ...form, dates: { ...form.dates, start_date: Date(value) } };
+      return { ...form, dates: { ...form.dates, start_date: value } };
     case "end_date":
-      return { ...form, dates: { ...form.dates, end_date: Date(value) } };
+      return { ...form, dates: { ...form.dates, end_date: value } };
     default:
       return { ...form, [name]: value };
   }

@@ -23,7 +23,7 @@ import axios from 'axios';
       start_date: '',
       end_date: '',
     },
-    image: ''
+    image: '',
   });
 
   const { title, description, duration, online, image, dates: { start_date, end_date }, price: { early_bird, normal }, } = form; 
@@ -33,7 +33,7 @@ import axios from 'axios';
   setForm(formData);
 
   const formDates = prepareDatesForm(form, e.target); 
-  setForm({...form, ...formDates}); 
+  setForm(formDates); 
 
 };
 
@@ -131,14 +131,14 @@ import axios from 'axios';
        />
        <br />
        <br />
-       <label htmlFor="end">End Date:</label>
+       <label htmlFor="end_date">End Date:</label>
        <input 
        name="end_date"
        type="date"
        min="2023-02-01"
        max="2031-02-01"
        value={end_date}
-       onSelect={handleInput}
+       onChange={handleInput}
        />
       </label>
       <br />

@@ -117,6 +117,54 @@
       },
       "image": "",
       "id": "qLsRv2p"
+    },
+    {
+      "title": "",
+      "description": "",
+      "duration": "",
+      "price": {
+        "early_bird": 0,
+        "normal": 0
+      },
+      "online": false,
+      "dates": {
+        "start_date": "2023-02-15",
+        "end_date": "2023-02-23"
+      },
+      "image": "",
+      "id": "OCyi0yD"
+    },
+    {
+      "title": "date test 2",
+      "description": "",
+      "duration": "",
+      "price": {
+        "early_bird": 0,
+        "normal": 0
+      },
+      "online": false,
+      "dates": {
+        "start_date": "2023-02-15",
+        "end_date": "2023-02-24"
+      },
+      "image": "",
+      "id": "uQPxrwv"
+    },
+    {
+      "title": "date test 3 online",
+      "description": "",
+      "duration": "",
+      "price": {
+        "early_bird": 0,
+        "normal": 0
+      },
+      "online": true,
+      "dates": {
+        "start_date": "2023-02-02",
+        "end_date": "2023-02-09"
+      },
+      "image": "",
+      "id": "NMxrLcK"
     }
   ]
 }
