@@ -103,68 +103,37 @@
       "id": "eCsag11"
     },
     {
-      "title": "117",
-      "description": "",
-      "duration": "",
+      "title": "77777",
+      "description": "77777",
+      "duration": "1 month",
       "price": {
-        "early_bird": 0,
-        "normal": 0
+        "early_bird": 100,
+        "normal": 300
       },
       "online": true,
       "dates": {
-        "start_date": "",
-        "end_date": ""
+        "start_date": "2023-02-17",
+        "end_date": "2023-03-17"
       },
       "image": "",
-      "id": "qLsRv2p"
+      "id": "MBsIlLU"
     },
     {
-      "title": "",
-      "description": "",
-      "duration": "",
+      "title": "555",
+      "description": "555",
+      "duration": "1 month",
       "price": {
-        "early_bird": 0,
-        "normal": 0
-      },
-      "online": false,
-      "dates": {
-        "start_date": "2023-02-15",
-        "end_date": "2023-02-23"
-      },
-      "image": "",
-      "id": "OCyi0yD"
-    },
-    {
-      "title": "date test 2",
-      "description": "",
-      "duration": "",
-      "price": {
-        "early_bird": 0,
-        "normal": 0
-      },
-      "online": false,
-      "dates": {
-        "start_date": "2023-02-15",
-        "end_date": "2023-02-24"
-      },
-      "image": "",
-      "id": "uQPxrwv"
-    },
-    {
-      "title": "date test 3 online",
-      "description": "",
-      "duration": "",
-      "price": {
-        "early_bird": 0,
-        "normal": 0
+        "early_bird": 300,
+        "normal": 500
       },
       "online": true,
       "dates": {
-        "start_date": "2023-02-02",
-        "end_date": "2023-02-09"
+        "start_date": "2023-02-17",
+        "end_date": "2023-03-17"
       },
       "image": "",
-      "id": "NMxrLcK"
+      "early_bird": "1",
+      "id": "HcYpotL"
     }
   ]
 }

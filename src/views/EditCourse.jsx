@@ -3,7 +3,6 @@ import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { editCourse } from "../api/fetch.jsx"; 
-import App from './DatePicker';
 import axios from 'axios';
   
 
@@ -21,7 +20,7 @@ import axios from 'axios';
           start_date: '',
           end_date: '',
         },
-        image: ''
+        image: '',
       });
     
  const { title, description, duration, online, image, dates: { start_date, end_date }, price: { early_bird, normal }, } = formValues;
@@ -39,7 +38,7 @@ import axios from 'axios';
 
     const handleEdit2 = (e) => {
     const formDates = prepareDatesForm(formValues, e.target); 
-    setFormValues({...formValues, ...formDates});
+    setFormValues(formDates);
     };
   
     const handleSubmit = async (e) => {
@@ -121,26 +120,24 @@ import axios from 'axios';
        Dates:
        <br />
        <label htmlFor="start_date">Start Date:</label>
-       <App 
-       input 
+       <input 
        name="start_date"
        type="date"
        min="2023-02-01"
        max="2031-02-01"
        value={start_date}
-       onChange={handleEdit2}
+       onChange={handleEdit}
        />
        <br />
        <br />
-       <label htmlFor="end">End Date:</label>
-       <App 
-       input 
+       <label htmlFor="end_date">End Date:</label>
+       <input 
        name="end_date"
        type="date"
        min="2023-02-01"
        max="2031-02-01"
        value={end_date}
-       onChange={handleEdit2}
+       onChange={handleEdit}
        />
       </label>
       <br />

@@ -4,7 +4,6 @@ import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
-/* import App from './DatePicker'; */
 import axios from 'axios';
 /* import { Link } from 'react-router-dom'; */
 
@@ -31,19 +30,12 @@ import axios from 'axios';
   const handleInput = (e) => {
   const formData = prepareCourseForm(form, e.target);
   setForm(formData);
-
-  const formDates = prepareDatesForm(form, e.target); 
-  setForm(formDates); 
-
-};
-
-  
-  /*
-  const handleInput2 = (e) => {
-  const formDates = prepareDatesForm(form, e.target); 
-  setForm({...form, ...formDates}); 
   };
-*/
+
+ const handleInput2 = (e) => {
+ const formDates = prepareDatesForm(form, e.target); 
+  setForm(formDates); 
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -127,7 +119,7 @@ import axios from 'axios';
        min="2023-02-01"
        max="2031-02-01"
        value={start_date}
-       onChange={handleInput}
+       onChange={handleInput2}
        />
        <br />
        <br />
@@ -138,7 +130,7 @@ import axios from 'axios';
        min="2023-02-01"
        max="2031-02-01"
        value={end_date}
-       onChange={handleInput}
+       onChange={handleInput2}
        />
       </label>
       <br />
