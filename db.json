@@ -101,39 +101,6 @@
       },
       "image": "C:\\fakepath\\-.jpg",
       "id": "eCsag11"
-    },
-    {
-      "title": "77777",
-      "description": "77777",
-      "duration": "1 month",
-      "price": {
-        "early_bird": 100,
-        "normal": 300
-      },
-      "online": true,
-      "dates": {
-        "start_date": "2023-02-17",
-        "end_date": "2023-03-17"
-      },
-      "image": "",
-      "id": "MBsIlLU"
-    },
-    {
-      "title": "555",
-      "description": "555",
-      "duration": "1 month",
-      "price": {
-        "early_bird": 300,
-        "normal": 500
-      },
-      "online": true,
-      "dates": {
-        "start_date": "2023-02-17",
-        "end_date": "2023-03-17"
-      },
-      "image": "",
-      "early_bird": "1",
-      "id": "HcYpotL"
     }
   ]
 }

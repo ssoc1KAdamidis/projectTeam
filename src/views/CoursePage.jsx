@@ -73,6 +73,8 @@ const CoursePage = () => {
       <div>
         <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="delete" width="15px" /></button>
       </div>
+      <br />
+      <br />
     </>
   );
 };

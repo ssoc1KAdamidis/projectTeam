@@ -186,9 +186,11 @@ import axios from 'axios';
       <br />
       <br />
       <button type="submit">Add new Course<img src='./add.avif' alt="add" width='15px'/></button>
+      <br />
+      <br />
+      <br />
       </form>
-      </>
-    
+      </>  
   );
 };
 

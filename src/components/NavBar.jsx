@@ -11,8 +11,7 @@ const NavBar = () => {
     <Navbar
       className="Navbar"
       style={{
-        backgroundColor: "rgba(0, 0, 0, 0.15)",
-        color: "black",
+        backgroundColor: "#ccc",
         fontSize: "small",
         fontWeight: "bold",
       }}
@@ -21,21 +20,20 @@ const NavBar = () => {
       <Navbar.Brand as={Link} to="/" style={{ margin: "5px" }}>
         Dashboard
       </Navbar.Brand>
-      {/*not working as we want */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
           <Nav.Link
             as={NavLink}
             to="/courses"
-            style={{ margin: "5px", color: "black" }}
+            style={{ margin: "1px", color: "black" }}
           >
             Courses
           </Nav.Link>
           <Nav.Link
             as={NavLink}
             to="/new"
-            style={{ margin: "5px", color: "black" }}
+            style={{ margin: "1px", color: "black", hover:"violet" }}
           >
             Add New Course
           </Nav.Link>

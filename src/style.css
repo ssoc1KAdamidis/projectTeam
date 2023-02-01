@@ -1,18 +1,18 @@
 body {
-  background: #ccc;
+  background: rgb(219, 215, 215);
   text-align: center;
   font-size: small;
   font-family: 'Courier New', Courier, monospace;
 }
 
 table {
-  margin-left: 25px; /* not working */
-  margin-right: 25px; /* not working */
-  width: 50%; /* not working */
+  margin-left: 25px; 
+  margin-right: 25px; 
+  width: 50%; 
   background-color:white;
   text-align: center;
   font-size: small;
-  font-family:'Courier New', Courier, monospace
+  font-family:'Courier New', Courier, monospace;
 }
 
 .stats-card-container{
@@ -54,7 +54,7 @@ table {
 input {
   width: 100%;
   border: 1px solid;
-  border-color:rgba(0, 0, 0, 0.15);
+  border-color: #ccc;
   font-family: 'Courier New', Courier, monospace;
   outline: none;
   accent-color: inherit;
@@ -63,7 +63,7 @@ input {
 textarea {
   width: 100%;
   border: 1px solid;
-  border-color:rgba(0, 0, 0, 0.15);
+  border-color:#ccc;
   font-family: 'Courier New', Courier, monospace;
   outline: none;
 }
@@ -71,7 +71,7 @@ textarea {
 select {
   width: 100%;
   border: none;
-  background-color:rgba(0, 0, 0, 0.15); 
+  background-color: #ccc; 
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   color:black;
@@ -82,35 +82,33 @@ button {
   width: 100px;
   overflow: hidden;
   border: none;
-  background-color:rgba(0, 0, 0, 0.15); 
+  background-color: #ccc;
   font-family: 'Courier New', Courier, monospace;
   font-size: small;
   color: "black";
+  opacity: 1.0;
 }
 
-h1, h3 {
+h1, h3, p {
   margin: 10px;
 }
 
-p {
-  margin: 10px;   
+/*
+button:hover {
+  background-color: rgba(191, 181, 195, 0.907); 
+  color: black;
 }
+*/
 
-a:hover, a:active {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: small;
+a:hover {
+  background-color: rgba(191, 181, 195, 0.907);
   color: black;
 }
 
-a {
+a:link, a:visited, a:active, a {
   font-family: 'Courier New', Courier, monospace;
   font-size: small;
-  color: "black";
-}
-
-a:link, a:visited {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: small;
+  /*background-color: #ccc; */
   color: black;
 }
 
@@ -130,6 +128,7 @@ input[type='checkbox'] {
 
 
 
+/*
 input[type='date'] .selected {
   accent-color: black;
   
@@ -161,7 +160,6 @@ input[type='date'] {
   color:black;
 }
 
-/* 
 input[type='date'] ~ button {
   margin-left: auto;
   position: absolute;
