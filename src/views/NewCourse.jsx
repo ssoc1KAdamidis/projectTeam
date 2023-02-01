@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
-import axios from 'axios';
+/* import axios from 'axios'; */
 /* import { Link } from 'react-router-dom'; */
 
 
@@ -51,17 +51,16 @@ import axios from 'axios';
 
     const [selectedFile, setSelectedFile] = useState(null);
     const handleChange = async (e) => {
-    setSelectedFile(e.target.image[0]);
-    const formData = new FormData();
-    formData.append('image', selectedFile);
-    <button onClick={handleUpload}>Upload</button>
+    setSelectedFile(e.target.files[0]);
+    /* formData.append('image', selectedFile); */
+    /* <button onClick={handleUpload}>Upload</button> */
     /*return selectedFile.name;*/
     }
 
     const handleUpload = async (e) => {
     const formData = new FormData();
-    /*await*/ axios.post('/courses/{$id}/', formData)
-    /*await fetch('/courses/{$id}/', formData)*/
+    /* axios.post('/courses/{$id}/', formData) */
+    await fetch('/courses/{$id}/', formData) 
     }
 
  return (

@@ -24,8 +24,7 @@ const CourseCard = ({
       <p>
         Dates:
         <b>
-          {moment(dates.start_date).format("DD/MM/YYYY")} -
-          {moment(dates.end_date).format("DD/MM/YYYY")}
+        {moment(dates.start_date).format("DD/MM/YYYY")} - {moment(dates.end_date).format("DD/MM/YYYY")}
         </b>
       </p>
       <Link to={`${id}`}>

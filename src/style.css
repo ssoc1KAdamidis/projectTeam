@@ -82,7 +82,8 @@ button {
   width: 100px;
   overflow: hidden;
   border: none;
-  background-color: #ccc;
+  /* background-color: #ccc; */
+  background-color: rgba(179, 173, 182, 0.907);
   font-family: 'Courier New', Courier, monospace;
   font-size: small;
   color: "black";
@@ -93,12 +94,12 @@ h1, h3, p {
   margin: 10px;
 }
 
-/*
-button:hover {
+
+button:hover, link:hover {
   background-color: rgba(191, 181, 195, 0.907); 
   color: black;
 }
-*/
+
 
 a:hover {
   background-color: rgba(191, 181, 195, 0.907);

@@ -23,84 +23,119 @@
   ],
   "courses": [
     {
-      "id": "01",
-      "title": "Εισαγωγή στο Storytelling",
-      "imagePath": "/courses/storytelling.jpg",
+      "title": "Introduction to TypeScript",
+      "imagePath":"/courses/typescript.jpg",
+      "description": "TypeScript is a free and open source high-level programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript.As it is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs. ",
+      "duration": "3 weeks",
       "price": {
         "early_bird": 300,
         "normal": 500
       },
+      "online": false,
       "dates": {
-        "start_date": "2023-01-12",
-        "end_date": "2023-02-05"
+        "start_date": "2023-02-17",
+        "end_date": "2023-03-10"
       },
-      "duration": "3 weeks",
-      "online": true,
-      "description": "Το Digital Storytelling είναι μια μορφή διαδραστικού content marketing, που σκοπό έχει να παρουσιάσει μια ιστορία με τρόπο που να κεντρίζει το ενδιαφέρον του ακροατηρίου.  Σκοπός του εργαστηρίου είναι να δημιουργήσουμε την προσωπική μας ιστορία μέσα από τις γνώσεις και τις βιωματικές εμπειρίες που συνδέονται με αυτό που θέλουμε να προβάλουμε. Με αυτόν τον τρόπο αποκτούμε ένα ανταγωνιστικό μήνυμα που μπορεί να ξεχωρίσει στον χώρο του διαδικτύου."
+      "id": "01"
     },
     {
-      "id": "02",
-      "title": "Εισαγωγή στο Excel Plus",
-      "imagePath": "/courses/excel.jpg",
-      "price": {
-        "normal": 300,
-        "early_bird": 200
-      },
-      "dates": {
-        "start_date": "2023-01-15",
-        "end_date": "2023-01-30"
-      },
+      "title": "Introduction to Vue.JS",
+      "imagePath":"/courses/vue.png",
+      "description": "Vue.js (commonly referred to as Vue; pronounced \"view\" is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members.",
       "duration": "2 weeks",
-      "online": true,
-      "description": "Στο μάθημα αυτό θα μάθουμε πως μπορούμε να αξιοποιήσουμε τα εργαλεία που μας δίνει το Excel προκειμένου να χειριστούμε τα δεδομένα μας εύκολα και γρήγορα και να εμβαθύνουμε τις γνώσεις μας. Προαπαιτούμενη γνώση από το Βασικό Επίπεδο Excel."
+      "price": {
+        "early_bird": 200,
+        "normal": 300
+      },
+      "online": false,
+      "dates": {
+        "start_date": "2023-03-15",
+        "end_date": "2023-03-29"
+      },
+      "id": "02"
     },
     {
-      "id": "03",
-      "title": "Εισαγωγή στο Internet",
-      "imagePath": "/courses/internet.jpg",
+      "title": "Introduction to React",
+      "imagePath":"/courses/reactjs.jpg",
+      "description": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies.React can be used as a base in the development of single-page, mobile, or server-rendered applications with frameworks like Next.js. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.",
+      "duration": "1 month",
       "price": {
         "early_bird": 500,
         "normal": 200
       },
+      "online": false,
       "dates": {
         "start_date": "2023-02-10",
         "end_date": "2023-03-10"
       },
-      "duration": "1 month",
-      "online": false,
-      "description": "Tί είναι το Ίντερνετ; Aναρωτιέσαι πώς δημιουργήθηκε, τί δυνατότητες προσφέρει και πώς μπορείς να το χρησιμοποιήσεις στην καθημερινότητά σου με ασφάλεια; Αισθάνεσαι ότι ήρθε η στιγμή να αξιοποιήσεις το διαδίκτυο και να χαθείς στο ταξίδι της πληροφορίας, της επικοινωνίας και της διασκέδασης; Το Start Project προσφέρει ένα εισαγωγικό σεμινάριο στον κόσμο του Internet, ιδανικό για όσους θέλετε να γνωρίσετε τον χώρο."
+      "id": "03"
     },
     {
-      "id": "04",
-      "title": "Eισαγωγή στο Canva",
-      "imagePath": "/courses/canva.jpg",
+      "title": "Introduction to Node.JS",
+      "imagePath": "/courses/nodejs.png",
+      "description": "Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.\n\nNode.js lets developers use JavaScript to write command line tools and for server-side scripting. The functionality of running scripts server-side produces dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a \"JavaScript everywhere\" paradigm, unifying web-application development around a single programming language, rather than different languages for server-side and client-side scripts.\n\nNode.js has an event-driven architecture capable of asynchronous I/O. These design choices aim to optimize throughput and scalability in web applications with many input/output operations, as well as for real-time Web applications (e.g., real-time communication programs and browser games).\n\nThe Node.js distributed development project was previously governed by the Node.js Foundation, and has now merged with the JS Foundation to form the OpenJS Foundation. OpenJS Foundation is facilitated by the Linux Foundation's Collaborative Projects program.",
+      "duration": "1 month",
       "price": {
         "early_bird": 800,
         "normal": 300
       },
+      "online": false,
       "dates": {
         "start_date": "2023-02-15",
         "end_date": "2023-03-15"
       },
-      "duration": "1 month",
-      "online": false,
-      "description": "Το σεμινάριο απευθύνεται σε συμμετέχοντες που επιθυμούν να μάθουν πώς να επεξεργάζονται εικόνες και να δημιουργούν τα δικά τους γραφικά με εύκολο τρόπο. εικόνας. Χρησιμοποιώντας την online πλατφόρμα σχεδιασμού Canva θα φτιάξουμε εύκολα και γρήγορα δελεαστικά δημιουργικά. Αν θέλεις να ανεβάζεις ελκυστικές αναρτήσεις στο διαδίκτυο, αυτό το σεμινάριο είναι φτιαγμένο για σένα!"
+      "id": "04"
     },
     {
-      "title": "Εισαγωγή στη React",
-      "description": "Εισαγωγή στη React",
+      "title": "Introduction to JavaScript",
+      "imagePath": "/courses/js.png",
+      "description": "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.\n\nJavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM). ",
+      "duration": "1 month",
+      "price": {
+        "early_bird": 300,
+        "normal": 500
+      },
+      "online": false,
+      "dates": {
+        "start_date": "2023-02-21",
+        "end_date": "2023-03-21"
+      },
+      "image": "",
+      "id": "05"
+    },
+    {
+      "title": "Introduction to Next.JS",
+      "imagePath": "/courses/next.jpeg",
+      "description": "Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites. ",
       "duration": "3 months",
       "price": {
-        "early_bird": 50,
-        "normal": 100
+        "early_bird": 100,
+        "normal": 300
       },
-      "online": "",
+      "online": true,
       "dates": {
-        "start_date": "",
-        "end_date": ""
+        "start_date": "2023-02-01",
+        "end_date": "2023-05-01"
       },
-      "image": "C:\\fakepath\\-.jpg",
-      "id": "eCsag11"
+      "image": "",
+      "id": "06"
+    },
+    {
+      "title": "Introduction to Express.JS",
+      "imagePath": "/courses/expressjs.jpg",
+      "description": "Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.[3] It has been called the de facto standard server framework for Node.js.",
+      "duration": "3 months",
+      "price": {
+        "early_bird": 500,
+        "normal": 700
+      },
+      "online": false,
+      "dates": {
+        "start_date": "2023-03-01",
+        "end_date": "2023-05-31"
+      },
+      "image": "",
+      "id": "07"
     }
   ]
 }

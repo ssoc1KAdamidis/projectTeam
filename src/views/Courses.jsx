@@ -28,7 +28,6 @@ const Courses = () => {
       online={online}
       dates = {dates}  
       imagePath = {imagePath}
-      
       />  
       </div>
       )  

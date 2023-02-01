@@ -5,11 +5,13 @@ export async function fetchStats() {
   const data = await res.json();
   return data;
 }
+
 export async function fetchCourse(id) {
   const res = await fetch(`http://localhost:3001/courses/${id}`);
   const data = await res.json();
   return data;
 }
+
 export async function postCourse(formData) {
   const res = await fetch("http://localhost:3001/courses/", {
     method: "POST",
@@ -20,11 +22,9 @@ export async function postCourse(formData) {
   return data;
 }
 
-export async function editCourse(formValues) {
-
-  /*const res = await axios.patch('http://localhost:3001/courses/:id', */
-    const res = await fetch("http://localhost:3001/courses/", {
-    method: "POST", 
+export async function editCourse(formValues, id) {
+  const res = await fetch(`http://localhost:3001/courses/${id}`, {
+    method: "PUT", 
     body: JSON.stringify(formValues),
     headers: { "Content-Type": "application/json" },
   });

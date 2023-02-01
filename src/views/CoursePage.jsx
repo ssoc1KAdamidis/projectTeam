@@ -6,7 +6,7 @@ import { Spin } from "antd";
 import { Link } from "react-router-dom";
 /* import Link from "antd/es/typography/Link";*/
 import { deleteCourse } from "../api/fetch.jsx";
-/* import moment from 'moment'; */
+import moment from 'moment';
 
 
 const CoursePage = () => {
@@ -60,7 +60,7 @@ const CoursePage = () => {
         <b>
           Dates:
           <span>
-            {dates.start_date} - {dates.end_date}
+          {moment(dates.start_date).format("DD/MM/YYYY")} - {moment(dates.end_date).format("DD/MM/YYYY")}
           </span>
         </b>
       </p>
