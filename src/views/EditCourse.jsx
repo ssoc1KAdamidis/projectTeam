@@ -3,9 +3,8 @@ import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from "../utilities/form.jsx";
 import { editCourse, fetchCourse } from "../api/fetch.jsx";
-import { useParams } from "react-router-dom";
 // import axios from 'axios';
-
+import { useParams } from "react-router-dom";
 
 const EditForm = () => {
   const { id } = useParams();
@@ -28,7 +27,6 @@ const EditForm = () => {
   useEffect(() => {
     async function fetchData() {
       const data = await fetchCourse(id);
-
       setFormValues({
         title: data.title,
         description: data.description,
@@ -45,11 +43,18 @@ const EditForm = () => {
         image: data.image,
       });
     }
-
     fetchData();
   }, [id]);
 
-  const { title, description, duration, online, image, dates: { start_date, end_date }, price: { early_bird, normal }, } = formValues;
+  const {
+    title,
+    description,
+    duration,
+    online,
+    image,
+    dates: { start_date, end_date },
+    price: { early_bird, normal },
+  } = formValues;
 
   const handleEdit = (e) => {
     setFormValues({
@@ -77,26 +82,28 @@ const EditForm = () => {
     setIsChecked(e.target.checked);
   };
 
-  const [selectedFile, setSelectedFile] = useState("true");
+  const [selectedFile, setSelectedFile] = useState('');
   const handleChange = async (e) => {
-    setSelectedFile(e.target.file[0]);
-  }
+    setSelectedFile(e.target.files[0]);
+  };
 
-  const handleUpload = async () => { 
+  const handleUpload = async () => {
     const formData = new FormData();
     formData.append("image", selectedFile);
+
     const response = await fetch(`http://localhost:3001/courses/${id}`, {
       method: "POST",
       body: formData,
     });
-  
     if (response.ok) {
       console.log("Image uploaded successfully");
     } else {
       console.error("Failed to upload image");
     }
   };
-  
+
+ 
+
   return (
     <>
       <NavBar />
@@ -208,7 +215,7 @@ const EditForm = () => {
             type="file"
             name="image"
             value={image}
-            accept="image/*"
+            accept="image.*"
             onChange={handleChange}
           />
           <button onClick={handleUpload}>Upload</button>
@@ -217,13 +224,9 @@ const EditForm = () => {
         <br />
         <br />
         <button type="submit">Save Course</button>
-        <br />
-        <br />
-        <br />
       </form>
     </>
   );
 };
-
 
 export default EditForm;
