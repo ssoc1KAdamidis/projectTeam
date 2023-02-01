@@ -20,11 +20,11 @@ export async function postCourse(formData) {
   return data;
 }
 
-export async function editCourse(formValues) {
+export async function editCourse(formValues, id) {
 
   /*const res = await axios.patch('http://localhost:3001/courses/:id', */
-    const res = await fetch("http://localhost:3001/courses/", {
-    method: "POST", 
+    const res = await fetch(`http://localhost:3001/courses/${id}`, {
+    method: "PUT", 
     body: JSON.stringify(formValues),
     headers: { "Content-Type": "application/json" },
   });

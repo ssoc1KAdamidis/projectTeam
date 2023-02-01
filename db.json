@@ -94,12 +94,11 @@
         "early_bird": 50,
         "normal": 100
       },
-      "online": "",
       "dates": {
-        "start_date": "",
-        "end_date": ""
+        "start_date": "2023-02-15",
+        "end_date": "2023-03-02"
       },
-      "image": "C:\\fakepath\\-.jpg",
+      "image": "",
       "id": "eCsag11"
     },
     {
@@ -119,21 +118,36 @@
       "id": "MBsIlLU"
     },
     {
-      "title": "555",
-      "description": "555",
-      "duration": "1 month",
+      "title": "test img",
+      "description": "",
+      "duration": "",
       "price": {
-        "early_bird": 300,
-        "normal": 500
+        "early_bird": 0,
+        "normal": 0
       },
       "online": true,
       "dates": {
-        "start_date": "2023-02-17",
-        "end_date": "2023-03-17"
+        "start_date": "",
+        "end_date": ""
       },
       "image": "",
-      "early_bird": "1",
-      "id": "HcYpotL"
+      "id": "JoQjBSU"
+    },
+    {
+      "title": "test dddd",
+      "description": "",
+      "duration": "",
+      "price": {
+        "early_bird": 0,
+        "normal": 0
+      },
+      "online": false,
+      "dates": {
+        "start_date": "",
+        "end_date": ""
+      },
+      "image": "",
+      "id": "n-wARC6"
     }
   ]
 }
