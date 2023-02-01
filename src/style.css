@@ -128,40 +128,56 @@ input[type='checkbox'] {
   accent-color: black;
 }
 
-/*
+
+
 input[type='date'] .selected {
-  accent-color: #ccc;
-  background-color: #ccc;
+  accent-color: black;
+  
 }
-*/
 
-/*
 input[type="date"] .select {
-  accent-color: #ccc;
-  background-color: #ccc;
+  accent-color: black;
+  
 }
-*/
 
-/*
 input[type="date"] .focus {
-  accent-color: #ccc;
-  background-color: #ccc;
-  color: #ccc;
-}
-*/
+  accent-color: black;
 
-/*
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator {
-  color: #ccc;
-}
-*/
+  accent-color: black;
 
-/*
+}
+
 .date-edit-field:not([disabled="true"]):focus {
   background-color: black;
   color: HighlightText;
   outline: none;
 }
+
+input[type='date'] {
+  accent-color: black;
+  color:black;
+}
+
+/* 
+input[type='date'] ~ button {
+  margin-left: auto;
+  position: absolute;
+  right: 1.8rem;
+  align-self: center;
+  text-align: center;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: rgb(170, 170, 170);
+}
+
+input[type='date'] ~ button:hover {
+  color: rgb(90, 90, 90);
+}
 */
 
-/* color in date picker not working */
+/* selected color in date picker not working */
