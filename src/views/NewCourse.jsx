@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
-/* import axios from 'axios'; */
+import axios from 'axios'; 
 /* import { Link } from 'react-router-dom'; */
 
 
@@ -49,20 +49,23 @@ import { postCourse } from "../api/fetch.jsx";
     setIsChecked(e.target.checked);
   }
 
-    const [selectedFile, setSelectedFile] = useState(null);
-    const handleChange = async (e) => {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const handleChange = async (e) => {
     setSelectedFile(e.target.files[0]);
-    /* formData.append('image', selectedFile); */
-    /* <button onClick={handleUpload}>Upload</button> */
-    /*return selectedFile.name;*/
-    }
-
-    const handleUpload = async (e) => {
     const formData = new FormData();
-    /* axios.post('/courses/{$id}/', formData) */
-    await fetch('/courses/{$id}/', formData) 
-    }
+    formData.append('image', selectedFile); 
+    <button onClick={handleUpload}>Upload</button> 
+    return selectedFile.name;
+  }
 
+  const handleUpload = async (e) => {
+    const formData = new FormData();
+    /* formData.append('image', selectedFile); */
+    axios.post('/courses/{$id}/', formData) 
+    await fetch('/courses/{$id}/', formData) 
+  }
+  
+      
  return (
   <>
 
@@ -178,7 +181,8 @@ import { postCourse } from "../api/fetch.jsx";
           name="image"
           value={image}
           accept="image/*"
-          onChange={handleChange}
+          onSelect={handleChange}
+          onChange={handleUpload}
           />        
       </label>
       <br />
@@ -192,5 +196,6 @@ import { postCourse } from "../api/fetch.jsx";
       </>  
   );
 };
+
 
 export default NewCourse;

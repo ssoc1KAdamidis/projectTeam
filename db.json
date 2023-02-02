@@ -24,12 +24,12 @@
   "courses": [
     {
       "title": "Introduction to TypeScript",
-      "imagePath":"/courses/typescript.jpg",
+      "imagePath": "/courses/typescript.jpg",
       "description": "TypeScript is a free and open source high-level programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript.As it is a superset of JavaScript, existing JavaScript programs are also valid TypeScript programs. ",
       "duration": "3 weeks",
       "price": {
-        "early_bird": 300,
-        "normal": 500
+        "early_bird": 500,
+        "normal": 100
       },
       "online": false,
       "dates": {
@@ -40,33 +40,33 @@
     },
     {
       "title": "Introduction to Vue.JS",
-      "imagePath":"/courses/vue.png",
+      "imagePath": "/courses/vue.png",
       "description": "Vue.js (commonly referred to as Vue; pronounced \"view\" is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications. It was created by Evan You, and is maintained by him and the rest of the active core team members.",
-      "duration": "2 weeks",
+      "duration": "3 weeks",
       "price": {
-        "early_bird": 200,
-        "normal": 300
+        "early_bird": 50,
+        "normal": 100
       },
       "online": false,
       "dates": {
-        "start_date": "2023-03-15",
-        "end_date": "2023-03-29"
+        "start_date": "2023-03-10",
+        "end_date": "2023-03-31"
       },
       "id": "02"
     },
     {
       "title": "Introduction to React",
-      "imagePath":"/courses/reactjs.jpg",
+      "imagePath": "/courses/reactjs.jpg",
       "description": "React (also known as React.js or ReactJS) is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta (formerly Facebook) and a community of individual developers and companies.React can be used as a base in the development of single-page, mobile, or server-rendered applications with frameworks like Next.js. However, React is only concerned with state management and rendering that state to the DOM, so creating React applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.",
       "duration": "1 month",
       "price": {
-        "early_bird": 500,
-        "normal": 200
+        "early_bird": 100,
+        "normal": 300
       },
       "online": false,
       "dates": {
-        "start_date": "2023-02-10",
-        "end_date": "2023-03-10"
+        "start_date": "2023-02-11",
+        "end_date": "2023-03-11"
       },
       "id": "03"
     },
@@ -97,8 +97,8 @@
       },
       "online": false,
       "dates": {
-        "start_date": "2023-02-21",
-        "end_date": "2023-03-21"
+        "start_date": "2023-02-17",
+        "end_date": "2023-03-17"
       },
       "image": "",
       "id": "05"
@@ -107,14 +107,14 @@
       "title": "Introduction to Next.JS",
       "imagePath": "/courses/next.jpeg",
       "description": "Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites. ",
-      "duration": "3 months",
+      "duration": "2 months",
       "price": {
-        "early_bird": 100,
-        "normal": 300
+        "early_bird": 300,
+        "normal": 500
       },
       "online": true,
       "dates": {
-        "start_date": "2023-02-01",
+        "start_date": "2023-03-01",
         "end_date": "2023-05-01"
       },
       "image": "",
@@ -124,18 +124,66 @@
       "title": "Introduction to Express.JS",
       "imagePath": "/courses/expressjs.jpg",
       "description": "Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.[3] It has been called the de facto standard server framework for Node.js.",
+      "duration": "2 months",
+      "price": {
+        "early_bird": 300,
+        "normal": 500
+      },
+      "online": false,
+      "dates": {
+        "start_date": "2023-03-01",
+        "end_date": "2023-05-01"
+      },
+      "image": "",
+      "id": "07"
+    },
+    {
+      "title": "Introduction to Unity ",
+      "description": "xxx",
       "duration": "3 months",
       "price": {
         "early_bird": 500,
         "normal": 700
       },
-      "online": false,
+      "online": true,
       "dates": {
-        "start_date": "2023-03-01",
-        "end_date": "2023-05-31"
+        "start_date": "2023-02-17",
+        "end_date": "2023-05-17"
       },
       "image": "",
-      "id": "07"
+      "id": "5Kg572q"
+    },
+    {
+      "title": "Edit",
+      "description": "edit",
+      "duration": "1 month",
+      "price": {
+        "early_bird": 100,
+        "normal": 300
+      },
+      "online": false,
+      "dates": {
+        "start_date": "2023-02-11",
+        "end_date": "2023-03-11"
+      },
+      "image": "",
+      "id": "YbRaYxr"
+    },
+    {
+      "title": "Delete",
+      "description": "delete",
+      "duration": "1 month ",
+      "price": {
+        "early_bird": 100,
+        "normal": 300
+      },
+      "online": true,
+      "dates": {
+        "start_date": "2023-02-17",
+        "end_date": "2023-03-17"
+      },
+      "image": "",
+      "id": "lBNS4_N"
     }
   ]
 }

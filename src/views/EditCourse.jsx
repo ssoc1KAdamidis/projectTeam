@@ -3,8 +3,9 @@ import NavBar from "../components/NavBar";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from "../utilities/form.jsx";
 import { editCourse, fetchCourse } from "../api/fetch.jsx";
-// import axios from 'axios';
 import { useParams } from "react-router-dom";
+import axios from 'axios'; 
+
 
 const EditForm = () => {
   const { id } = useParams();
@@ -46,15 +47,7 @@ const EditForm = () => {
     fetchData();
   }, [id]);
 
-  const {
-    title,
-    description,
-    duration,
-    online,
-    image,
-    dates: { start_date, end_date },
-    price: { early_bird, normal },
-  } = formValues;
+  const { title, description, duration, online, image, dates: { start_date, end_date }, price: { early_bird, normal }, } = formValues;
 
   const handleEdit = (e) => {
     setFormValues({
@@ -77,32 +70,55 @@ const EditForm = () => {
     await editCourse(formValues, id);
   };
 
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState('history');
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
   };
 
-  const [selectedFile, setSelectedFile] = useState('');
+
+  const [file, setFile] = useState('');
+  /* const [filename, setFilename] = useState('Choose File'); */
+  /* const [uploadedFile, setUploadedFile] = useState({}); */
+
   const handleChange = async (e) => {
-    setSelectedFile(e.target.files[0]);
+    setFile(e.target.files[0]);
+    /* setFilename(e.target.files[0].name); */
   };
 
-  const handleUpload = async () => {
+  const handleUpload = async (e) => {
+    e.preventDefault(); 
     const formData = new FormData();
-    formData.append("image", selectedFile);
-
-    const response = await fetch(`http://localhost:3001/courses/${id}`, {
-      method: "POST",
+    formData.append('image', file);
+    
+    
+    /*
+    await fetch(`http://localhost:3001/courses/${id}`, {
+      method: 'POST',
       body: formData,
-    });
-    if (response.ok) {
-      console.log("Image uploaded successfully");
-    } else {
-      console.error("Failed to upload image");
-    }
-  };
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
+    */
 
- 
+      /* const { fileName, filePath } = res.data; */
+      /* setUploadedFile({ fileName, filePath });*/
+    
+      axios.post(`http://example.com/courses/${id}`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data', 
+        },
+      })
+          .then((res) => {
+            const { /*fileName,*/ filePath } = res.data;
+            setFile({ /*fileName,*/ filePath });
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+    }
+
+
 
   return (
     <>
@@ -215,9 +231,11 @@ const EditForm = () => {
             type="file"
             name="image"
             value={image}
-            accept="image.*"
+            accept="image/*"
             onChange={handleChange}
           />
+          <br />
+          <br />
           <button onClick={handleUpload}>Upload</button>
         </label>
         <br />
@@ -228,5 +246,6 @@ const EditForm = () => {
     </>
   );
 };
+
 
 export default EditForm;
