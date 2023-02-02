@@ -5,7 +5,7 @@ import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
 import axios from 'axios'; 
-/* import { Link } from 'react-router-dom'; */
+import * as filestack from 'filestack-js';
 
 
   const NewCourse = () => {
@@ -49,21 +49,26 @@ import axios from 'axios';
     setIsChecked(e.target.checked);
   }
 
-  const [selectedFile, setSelectedFile] = useState(null);
-  const handleChange = async (e) => {
-    setSelectedFile(e.target.files[0]);
-    const formData = new FormData();
-    formData.append('image', selectedFile); 
-    <button onClick={handleUpload}>Upload</button> 
-    return selectedFile.name;
+  // const [selectedFile, setSelectedFile] = useState(null);
+   const client = filestack.init("AXMsK9B2RFS4Nt1J0UHY7z");
+   // isws na to dokimasoume etsi
+
+  const options = {
+    accept: ["image/*"],
+  };
+  const handleChange = async () => {
+    client.picker(options).open();
   }
 
+ 
   const handleUpload = async (e) => {
     const formData = new FormData();
     /* formData.append('image', selectedFile); */
     axios.post('/courses/{$id}/', formData) 
     await fetch('/courses/{$id}/', formData) 
   }
+  
+  
   
       
  return (

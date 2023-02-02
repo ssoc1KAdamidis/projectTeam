@@ -105,7 +105,6 @@
     },
     {
       "title": "Introduction to Next.JS",
-      "imagePath": "/courses/next.jpeg",
       "description": "Next.js is an open-source web development framework created by Vercel enabling React-based web applications with server-side rendering and generating static websites. ",
       "duration": "2 months",
       "price": {
@@ -122,14 +121,13 @@
     },
     {
       "title": "Introduction to Express.JS",
-      "imagePath": "/courses/expressjs.jpg",
       "description": "Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs.[3] It has been called the de facto standard server framework for Node.js.",
       "duration": "2 months",
       "price": {
         "early_bird": 300,
         "normal": 500
       },
-      "online": false,
+      "online": true,
       "dates": {
         "start_date": "2023-03-01",
         "end_date": "2023-05-01"
@@ -161,7 +159,7 @@
         "early_bird": 100,
         "normal": 300
       },
-      "online": false,
+      "online": true,
       "dates": {
         "start_date": "2023-02-11",
         "end_date": "2023-03-11"

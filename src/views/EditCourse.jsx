@@ -36,7 +36,7 @@ const EditForm = () => {
           early_bird: data.price.early_bird,
           normal: data.price.normal,
         },
-        online: data.online,
+        online: setIsChecked(data.online),
         dates: {
           start_date: data.dates.start_date,
           end_date: data.dates.end_date,
@@ -54,12 +54,12 @@ const EditForm = () => {
       ...formValues,
       [e.target.name]: e.target.value,
     });
-
+    
     const formData = prepareCourseForm(formValues, e.target);
     setFormValues(formData);
   };
 
-  const handleEdit2 = (e) => {
+  const handleEditDates = (e) => {
     const formDates = prepareDatesForm(formValues, e.target);
     setFormValues(formDates);
   };
@@ -70,7 +70,7 @@ const EditForm = () => {
     await editCourse(formValues, id);
   };
 
-  const [isChecked, setIsChecked] = useState('history');
+  const [isChecked, setIsChecked] = useState();
   const handleCheckboxChange = (e) => {
     setIsChecked(e.target.checked);
   };
@@ -171,7 +171,7 @@ const EditForm = () => {
             min="2023-02-01"
             max="2031-02-01"
             value={start_date}
-            onChange={handleEdit2}
+            onChange={handleEditDates}
           />
           <br />
           <br />
@@ -182,7 +182,7 @@ const EditForm = () => {
             min="2023-02-01"
             max="2031-02-01"
             value={end_date}
-            onChange={handleEdit2}
+            onChange={handleEditDates}
           />
         </label>
         <br />

@@ -36,22 +36,27 @@ const CourseTable = ({ url, resource }) => {
       title: "Date",
       dataIndex: "dates",
       render: (value) => {
-      return <span>{moment(value.start_date).format("DD/MM/YYYY")} - {moment(value.end_date).format("DD/MM/YYYY")}</span>
-      /*
+        return (
+          <span>
+            {moment(value.start_date).format("DD/MM/YYYY")} -{" "}
+            {moment(value.end_date).format("DD/MM/YYYY")}
+          </span>
+        );
+        /*
       <span>
       {moment(value.start_date).format("DD/MM/YYYY")} -
       {moment(value.end_date).format("DD/MM/YYYY")}
       </span>
       */
-      }
       },
+    },
     {
       title: "Action",
       dataIndex: "id",
       render: (id) => {
         return (
           <Link to={`courses/${id}`}>
-            <button>View Details</button>
+            <button style={{backgroundColor: "goldenrod" }}>View Details</button>
           </Link>
         );
       },
@@ -61,7 +66,7 @@ const CourseTable = ({ url, resource }) => {
   return (
     <Table
       columns={columns}
-      dataSource={courses.slice(-5,courses.length)}
+      dataSource={courses.slice(-5, courses.length)}
       pagination={false}
       loading={isLoading}
       rowKey={(record) => record.id}
