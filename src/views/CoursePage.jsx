@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import { useParams } from "react-router";
 import useCourses from "../api/useCourses";
 import { Spin } from "antd";
@@ -75,6 +76,7 @@ const CoursePage = () => {
       </div>
       <br />
       <br />
+      <Footer style= {{bottom: "-50px" }} />
     </>
   );
 };

@@ -2,11 +2,10 @@ import React from 'react'
 import useCourses from '../api/useCourses';
 import CourseCard from '../components/CourseCard';
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 
 const Courses = () => {
-
-  
     const data = useCourses(
         {
           url: "http://localhost:3001",
@@ -17,7 +16,7 @@ const Courses = () => {
     return (
     <>
     <NavBar /> 
-    {data.courses.map(({title, dates, id, price, online, duration, imagePath }) => {
+      {data.courses.map(({title, dates, id, price, online, duration, imagePath }) => {
       return ( 
       <div className="container" key= {id}>
       <CourseCard 
@@ -34,8 +33,9 @@ const Courses = () => {
     }
     )
   }
+  <Footer style= {{bottom: "-50px" }} />
   </>
     )
-
   }
+
 export default Courses; 

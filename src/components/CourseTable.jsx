@@ -42,12 +42,6 @@ const CourseTable = ({ url, resource }) => {
             {moment(value.end_date).format("DD/MM/YYYY")}
           </span>
         );
-        /*
-      <span>
-      {moment(value.start_date).format("DD/MM/YYYY")} -
-      {moment(value.end_date).format("DD/MM/YYYY")}
-      </span>
-      */
       },
     },
     {
@@ -56,7 +50,7 @@ const CourseTable = ({ url, resource }) => {
       render: (id) => {
         return (
           <Link to={`courses/${id}`}>
-            <button style={{backgroundColor: "goldenrod" }}>View Details</button>
+            <button /*style={{backgroundColor: "#ccc" }}*/>View Details</button>
           </Link>
         );
       },
@@ -70,7 +64,9 @@ const CourseTable = ({ url, resource }) => {
       pagination={false}
       loading={isLoading}
       rowKey={(record) => record.id}
-    ></Table>
+      style= {{width: "97%", marginLeft: "25px", 
+      marginRight: "25px" }} >
+    </Table>
   );
 };
 

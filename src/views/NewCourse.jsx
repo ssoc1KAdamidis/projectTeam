@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import React from 'react'
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from '../utilities/form.jsx';
 import { postCourse } from "../api/fetch.jsx";
-import axios from 'axios'; 
-import * as filestack from 'filestack-js';
+/* import axios from 'axios'; */
 
 
   const NewCourse = () => {
@@ -22,17 +22,17 @@ import * as filestack from 'filestack-js';
       start_date: '',
       end_date: '',
     },
-    image: '',
+    imagePath: '',
   });
 
-  const { title, description, duration, online, image, dates: { start_date, end_date }, price: { early_bird, normal }, } = form; 
+  const { title, description, duration, online, imagePath, dates: { start_date, end_date }, price: { early_bird, normal }, } = form; 
 
-  const handleInput = (e) => {
+ const handleInput = (e) => {
   const formData = prepareCourseForm(form, e.target);
   setForm(formData);
   };
 
- const handleInput2 = (e) => {
+ const handleInputDates = (e) => {
  const formDates = prepareDatesForm(form, e.target); 
   setForm(formDates); 
 };
@@ -49,155 +49,208 @@ import * as filestack from 'filestack-js';
     setIsChecked(e.target.checked);
   }
 
-  // const [selectedFile, setSelectedFile] = useState(null);
-   const client = filestack.init("AXMsK9B2RFS4Nt1J0UHY7z");
-   // isws na to dokimasoume etsi
+/*
+  const [image, setImage] = useState(null);
+  const [uploadedImage, setUploadedImage] = useState(null);
 
-  const options = {
-    accept: ["image/*"],
-  };
-  const handleChange = async () => {
-    client.picker(options).open();
-  }
-
- 
   const handleUpload = async (e) => {
-    const formData = new FormData();
-    /* formData.append('image', selectedFile); */
-    axios.post('/courses/{$id}/', formData) 
-    await fetch('/courses/{$id}/', formData) 
+    setImage(e.target.files[0]);
+    
+    const formDataWithImage = new FormData();
+    formDataWithImage.append('imagePath', image); 
+    
+    formDataWithImage.append("title", form.title);
+    formDataWithImage.append("description", form.description);
+    
+    try {
+      const response = await axios.fetch(`http://localhost:3001/courses/:id`, formDataWithImage, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+
+      setUploadedImage(response.data.imageUrl);
+    } catch (error) {
+      console.error(error);
+    }
+  } 
+  
+  const handleUpload = () => {
+  const formImage= document.querySelector('form');
+  const imageUrlInput = document.querySelector('#imageUrl');
+  const preview = document.querySelector('#preview');
+
+  form.addEventListener('submit', async event => {
+  event.preventDefault();
+
+  const imageUrl = imageUrlInput.value;
+  const imageBlob = await fetch(imageUrl).then(response => response.blob());
+  const formData = new FormData();
+  formData.append('image', imageBlob, 'image.jpg');
+
+  const response = await fetch('https://example.com/upload-image', {
+    method: 'POST',
+    body: formData
+  });
+
+  if (response.ok) {
+    alert('Image uploaded successfully');
+  } else {
+    alert('Failed to upload image');
   }
-  
-  
-  
-      
+})
+};
+*/
+
  return (
   <>
 
  <NavBar />
     <br />  
-    <h1><b>Add a new Course</b></h1>
+    <h1>
+     <b>Add a new Course</b>
+    </h1>
     <br />
     <br />
     <form onSubmit={handleSubmit}>
-      <label>
-        Title:   
-        <input
-          type="text"
-          name="title"
-          value={title}
-          onChange={handleInput}
-        />
-      </label>
-      <br />
-      <br />
-      <br />
-      <label>
-      Description:   
-        <textarea
+    <label>
+    Title:   
+    <input style={{textAlign: "center"}}
+        type="text"
+        name="title"
+        value={title}
+        onChange={handleInput}
+    />
+    </label>
+    <br />
+    <br />
+    <br />
+    <label>
+    Description:   
+    <textarea style={{textAlign: "center"}}
         type="text"
         name="description"
         value={description}
         onChange={handleInput}
-       />
-      </label>
-      <br />
-      <br />
-      <br />
-      <label>
-      Duration:   
-        <input
+    />
+    </label>
+    <br />
+    <br />
+    <br />
+    <label>
+    Duration:   
+    <input style={{textAlign: "center"}}
         type="text"
         name="duration"
         value={duration}
         onChange={handleInput}
-       />
+    />
+    </label>
+    <br />
+    <br />
+    <br />
+    <label>
+    Dates:
+    <br />
+    <label htmlFor="start_date">Start Date:</label>
+    <input style={{textAlign: "center"}}
+         name="start_date"
+         type="date"
+         min="2023-02-01"
+         max="2031-02-01"
+         value={start_date}
+         onChange={handleInputDates}
+    />
+    <br />
+    <br />
+    <label htmlFor="end_date">End Date:</label>
+    <input style={{textAlign: "center"}}
+         name="end_date"
+         type="date"
+         min="2023-02-01"
+         max="2031-02-01"
+         value={end_date}
+         onChange={handleInputDates}
+    />
+    </label>
+    <br />
+    <br />
+    <br />
+    <label>
+    Price:
+    <br />
+    <label htmlFor="early_bird">Early bird price:</label>
+    <input style={{textAlign: "center"}}
+          id="early_bird"
+          name="early_bird"
+          type="number"
+          value={early_bird}
+          onChange={handleInput}
+    />
+    <br />
+    <br />
+    <label htmlFor="normal">Normal price:</label>
+    <input style={{textAlign: "center"}}
+          id="normal"
+          name="normal"
+          type="number"
+          value={normal}
+          onChange={handleInput}
+    />
+    </label>
+    <br />
+    <br />
+    <br />
+    <label>
+    Online:
+    <input
+         type="checkbox"
+         checked={isChecked}
+         name="online"
+         value={online}
+         onChange={handleCheckboxChange}
+      />
       </label>
       <br />
       <br />
       <br />
       <label>
-       Dates:
-       <br />
-       <label htmlFor="start_date">Start Date:</label>
-       <input 
-       name="start_date"
-       type="date"
-       min="2023-02-01"
-       max="2031-02-01"
-       value={start_date}
-       onChange={handleInput2}
-       />
-       <br />
-       <br />
-       <label htmlFor="end_date">End Date:</label>
-       <input 
-       name="end_date"
-       type="date"
-       min="2023-02-01"
-       max="2031-02-01"
-       value={end_date}
-       onChange={handleInput2}
-       />
+      {/* not working without file extension */}
+      Image:
+      <input style={{textAlign: "center"}}
+         type="text"
+         placeholder="http://myimage.jpg"
+         name="imagePath"
+         value={imagePath}
+         onChange={handleInput}
+      />
       </label>
       <br />
       <br />
       <br />
+      {/*
       <label>
-        Price:
-        <br />
-            <label htmlFor="early_bird">Early bird price:</label>
-            <input
-              id="early_bird"
-              name="early_bird"
-              type="number"
-              value={early_bird}
-              onChange={handleInput}
-            />
-            <label htmlFor="normal">Normal price:</label>
-            <input
-              id="normal"
-              name="normal"
-              type="number"
-              value={normal}
-              onChange={handleInput}
-            />
+      Image:
+      <input
+         type="file"
+         name="imagePath"
+         value={imagePath}
+         accept="image/*"
+         onChange={handleUpload}
+      />   
+      <button onClick={handleUpload}>Upload Image</button>
+      {uploadedImage && <img src={uploadedImage} alt="" />}
       </label>
       <br />
       <br />
       <br />
-      <label>
-        Online:
-        <input
-          type="checkbox"
-          checked={isChecked}
-          name="online"
-          value={online}
-          onChange={handleCheckboxChange}
-        />
-        </label>
-        <br />
-        <br />
-        <br />
-       <label>
-        Image:
-        <input
-          type="file"
-          name="image"
-          value={image}
-          accept="image/*"
-          onSelect={handleChange}
-          onChange={handleUpload}
-          />        
-      </label>
-      <br />
-      <br />
-      <br />
+      */}
       <button type="submit">Add new Course<img src='./add.avif' alt="add" width='15px'/></button>
       <br />
       <br />
       <br />
       </form>
+      <Footer />
       </>  
   );
 };

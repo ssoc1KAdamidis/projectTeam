@@ -3,6 +3,7 @@ import { Card } from "antd";
 import moment from "moment";
 import { Link } from "react-router-dom";
 
+
 const CourseCard = ({
   id,
   title,
@@ -13,7 +14,7 @@ const CourseCard = ({
   imagePath,
 }) => {
   return (
-    <Card title={title} cover={<img alt="example" src={imagePath}/>}>
+    <Card title={title} cover={<img alt="" src={imagePath}/>}>
       <p>
         Price: <b>{price.normal}</b>&euro; | Online:
         {online ? <span>&#10003;</span> : <span>&#88;</span>}
@@ -33,5 +34,6 @@ const CourseCard = ({
     </Card>
   );
 };
+
 
 export default CourseCard;
