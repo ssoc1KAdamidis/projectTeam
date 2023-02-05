@@ -14,7 +14,7 @@ const CourseCard = ({
   imagePath,
 }) => {
   return (
-    <Card title={title} cover={<img alt="" src={imagePath}/>}>
+    <Card title={title} cover={<img alt="" src={imagePath} style={{width: "450", height: "500"}}/>}>
       <p>
         Price: <b>{price.normal}</b>&euro; | Online:
         {online ? <span>&#10003;</span> : <span>&#88;</span>}

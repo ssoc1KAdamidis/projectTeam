@@ -33,7 +33,7 @@ const NavBar = () => {
           <Nav.Link
             as={NavLink}
             to="/new"
-            style={{ margin: "1px", color: "black", hover:"violet" }}
+            style={{ margin: "1px", color: "black", hover: "violet" }}
           >
             Add New Course
           </Nav.Link>

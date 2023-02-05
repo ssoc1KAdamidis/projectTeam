@@ -18,7 +18,7 @@ export async function postCourse(formData) {
     body: JSON.stringify(formData),
     headers: { "Content-Type": "application/json" },
   });
-  window.location.href = '/courses'; /* working here */
+  // window.location.href = '/courses'; /* working here */ <-- this reloads the page
   const data = await res.json();
   return data;
 }
@@ -42,7 +42,7 @@ export async function editCourse(formValues, id) {
     body: JSON.stringify(formValues),
     headers: { "Content-Type": "application/json" },
   });
-  window.location.href = '/courses'; /* working here */
+  // window.location.href = '/courses'; /* working here */ <-- this reloads the page
   const data = await res.json();
   return data;
 }
@@ -62,7 +62,7 @@ export async function editUploadImage(formValuesWithImage, id) {
 
 export async function deleteCourse(id) {
     const res = await axios.delete(`http://localhost:3001/courses/${id}`);
-    window.location.href = '/courses'; /* working here */
+    // window.location.href = '/courses'; /* working here */ <-- this reloads the page
     const data = await res.json();
     return data;
 }

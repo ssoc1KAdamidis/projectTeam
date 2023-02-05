@@ -158,29 +158,13 @@
         "early_bird": 300,
         "normal": 500
       },
-      "online": true,
+      "online": false,
       "dates": {
         "start_date": "2023-02-17",
         "end_date": "2023-05-17"
       },
       "imagePath": "https://as2.ftcdn.net/v2/jpg/03/42/37/93/1000_F_342379310_FxjYQTbWRNPRb79iRnpIPDAQj2BHzIy5.jpg",
       "id": "NB8mmzK"
-    },
-    {
-      "title": "- Delete -",
-      "description": "delete",
-      "duration": "3 months",
-      "price": {
-        "early_bird": 300,
-        "normal": 500
-      },
-      "online": true,
-      "dates": {
-        "start_date": "2023-02-11",
-        "end_date": "2023-05-11"
-      },
-      "imagePath": "https://images.app.goo.gl/2VLX1LpMHdJ6fQV89",
-      "id": "tNr1pOJ"
     }
   ]
 }
