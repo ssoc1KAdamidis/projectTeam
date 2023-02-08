@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const Courses = () => {
   const data = useCourses({
-    url: "http://localhost:3001",
+    url: process.env.REACT_APP_API_URL,
     resource: "courses",
   });
 // https://www.youtube.com/watch?v=0i1hGQKw2eE <-- enviromental variables explain

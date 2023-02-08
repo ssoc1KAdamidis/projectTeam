@@ -21,6 +21,7 @@
     "redirect": "^0.2.0"
   },
   "devDependencies": {
+    "dotenv": "^16.0.3",
     "json-server": "^0.17.1"
   },
   "scripts": {

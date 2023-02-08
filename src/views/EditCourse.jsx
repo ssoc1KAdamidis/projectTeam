@@ -102,6 +102,7 @@ const EditForm = () => {
     <>
       <NavBar />
       <br />
+      <br />
       <h1>
         <b>Edit Course</b>
       </h1>

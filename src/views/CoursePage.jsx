@@ -13,7 +13,7 @@ const CoursePage = () => {
   let { id } = useParams();
   const navigate = useNavigate();
   const data = useCourses({
-    url: "http://localhost:3001",
+    url: process.env.REACT_APP_API_URL,
     resource: "courses",
     id,
   });
@@ -30,7 +30,7 @@ const CoursePage = () => {
   ) : (
     <>
       <NavBar />
-      <div style={{fontWeight: "bold"}}>
+      <div className="course-page-container">
       <br />
       <br />
       <br />
@@ -41,10 +41,10 @@ const CoursePage = () => {
       <br />
       <div>
         <img
+        className="image-course-card"
           src={imagePath}
           alt=""
           align="center"
-          style={{ width: "1200px", height: "768px" }}
         />
       </div>
       <hr />
@@ -83,7 +83,7 @@ const CoursePage = () => {
       <br />
       <br />
       </div>
-      <Footer style={{ bottom: "-50px" }} />
+      <Footer />
     </>
   );
 };

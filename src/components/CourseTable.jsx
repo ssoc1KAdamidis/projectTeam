@@ -64,8 +64,7 @@ const CourseTable = ({ url, resource }) => {
       pagination={false}
       loading={isLoading}
       rowKey={(record) => record.id}
-      style= {{width: "97%", marginLeft: "25px", 
-      marginRight: "25px" }} >
+      className="courses-table">
     </Table>
   );
 };

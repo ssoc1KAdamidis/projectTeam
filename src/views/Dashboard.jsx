@@ -15,11 +15,11 @@ const Dashboard = () => {
         Welcome to our Dashboard
       </Title>
       <div>
-        <StatsList url="http://localhost:3001" resource="stats" />
-        <br></br>
+        <StatsList url={process.env.REACT_APP_API_URL} resource="stats" />
+        <br/>
       </div>
       <div>
-        <CourseTable url="http://localhost:3001" resource="courses" />
+        <CourseTable url={process.env.REACT_APP_API_URL} resource="courses" />
       </div>
       <Footer />
     </>

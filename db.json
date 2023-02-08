@@ -149,22 +149,6 @@
       },
       "imagePath": "/courses/unity.jpg",
       "id": "5Kg572q"
-    },
-    {
-      "title": "",
-      "description": "",
-      "duration": "",
-      "price": {
-        "early_bird": 0,
-        "normal": 0
-      },
-      "online": true,
-      "dates": {
-        "start_date": "",
-        "end_date": ""
-      },
-      "imagePath": "",
-      "id": "NB8mmzK"
     }
   ]
 }

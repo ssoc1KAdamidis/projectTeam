@@ -10,18 +10,10 @@ const NavBar = () => {
   return (
     <Navbar
       className="Navbar"
-      style={{
-        backgroundColor: "#ccc",
-        fontSize: "small",
-        fontWeight: "bold",
-        position: "fixed",
-        top: "0",
-        width: "100%",
-        zIndex: "1"
-      }}
+   
       expand="lg"
     >
-      <Navbar.Brand as={Link} to="/" style={{ margin: "5px" }}>
+      <Navbar.Brand as={Link} to="/" className="navbar-link" style={{ margin: "5px" }}>
         Dashboard
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -30,14 +22,14 @@ const NavBar = () => {
           <Nav.Link
             as={NavLink}
             to="/courses"
-            style={{ margin: "1px", color: "black" }}
+            className="navbar-link"
           >
             Courses
           </Nav.Link>
           <Nav.Link
             as={NavLink}
             to="/new"
-            style={{ margin: "1px", color: "black", hover: "violet" }}
+            className="navbar-link"
           >
             Add New Course
           </Nav.Link>

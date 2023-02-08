@@ -9,6 +9,7 @@ body {
   font-size: small; 
 }
 
+
 .dashboard-title{
   font-size: 25px;
   font-weight: bold; /* bold is available in font-weight NOT font-style */
@@ -17,10 +18,13 @@ body {
 }
 
 
-table {
+.courses-table {
   background-color:white;
   text-align: center;
   font-size: small;
+  width: 97%;
+  margin-left: 25px;
+  margin-right: 25px;
   
 }
 
@@ -41,7 +45,15 @@ table {
 .course-card-container{
   font-weight: bold;
 }
+.course-page-container{
+  font-weight: bold;
 
+}
+
+.image-course-card{
+  width: 1200px;
+  height: 750px;
+}
 
 .container{
   text-align: center;
@@ -100,12 +112,24 @@ h1, h3, p {
   margin: 10px;
 }
 
-button:hover, link:hover {
+button:hover {
   background-color: rgba(191, 181, 195, 0.907); 
   color: black;
 }
+.Navbar{
+  background-color: #ccc;
+  font-size: small;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  
+}
+.navbar-link{
+ margin: 0px;
+}
 
-a:hover {
+.navbar-link:hover {
   background-color: rgba(191, 181, 195, 0.907);
   color: black;
 }
