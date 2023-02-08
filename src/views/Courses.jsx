@@ -1,41 +1,38 @@
-import React from 'react'
-import useCourses from '../api/useCourses';
-import CourseCard from '../components/CourseCard';
+import React from "react";
+import useCourses from "../api/useCourses";
+import CourseCard from "../components/CourseCard";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 
-
 const Courses = () => {
-    const data = useCourses(
-        {
-          url: "http://localhost:3001",
-           resource: "courses" 
-        },
-    )
-  
-    return (
+  const data = useCourses({
+    url: "http://localhost:3001",
+    resource: "courses",
+  });
+// https://www.youtube.com/watch?v=0i1hGQKw2eE <-- enviromental variables explain
+  return (
     <>
-    <NavBar /> 
-      {data.courses.map(({title, dates, id, price, online, duration, imagePath }) => {
-      return ( 
-      <div className="container" key= {id}>
-      <CourseCard 
-      id = {id}
-      title={title} 
-      price={price}  
-      duration={duration} 
-      online={online}
-      dates = {dates}  
-      imagePath = {imagePath}
-      />  
-      </div>
-      )  
-    }
-    )
-  }
-  <Footer style= {{bottom: "-50px" }} />
-  </>
-    )
-  }
+      <NavBar />
+      {data.courses.map(
+        ({ title, dates, id, price, online, duration, imagePath }) => {
+          return (
+            <div className="container" key={id}>
+              <CourseCard
+                id={id}
+                title={title}
+                price={price}
+                duration={duration}
+                online={online}
+                dates={dates}
+                imagePath={imagePath}
+              />
+            </div>
+          );
+        }
+      )}
+      <Footer />
+    </>
+  );
+};
 
-export default Courses; 
+export default Courses;

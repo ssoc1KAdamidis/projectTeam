@@ -18,11 +18,10 @@ const CoursePage = () => {
     id,
   });
 
-  const handleDelete  = (id) => {
+  const handleDelete = (id) => {
     deleteCourse(id);
     navigate("/courses");
   };
-
 
   const { description, title, imagePath, price, online, duration, dates } =
     data.courses;
@@ -31,46 +30,42 @@ const CoursePage = () => {
   ) : (
     <>
       <NavBar />
+      <div style={{fontWeight: "bold"}}>
+      <br />
+      <br />
       <br />
       <div>
-        <h2>
-          <b>{title}</b>
-        </h2>
+        <h2>{title}</h2>
       </div>
       <br />
       <br />
       <div>
-        <img src={imagePath} alt="" align="center" style={{width: "1200px", height: "768px"}} />
+        <img
+          src={imagePath}
+          alt=""
+          align="center"
+          style={{ width: "1200px", height: "768px" }}
+        />
       </div>
       <hr />
       <br />
       <br />
-      <div>
-        <b>{description}</b>
-      </div>
+      <div>{description}</div>
       <br />
       <p>
-        <b>
-          Price: {price.normal} <span>&euro;</span>
-        </b>
+        Price: {price.normal} <span>&euro;</span>
       </p>
       <p>
-        <b>
-          Online:
-          <span>{online ? <span>&#10003;</span> : <span>&#88;</span>}</span>
-        </b>
+        Online:
+        <span>{online ? <span>&#10003;</span> : <span>&#88;</span>}</span>
       </p>
+      <p>Duration: {duration}</p>
       <p>
-        <b>Duration: {duration}</b>
-      </p>
-      <p>
-        <b>
-          Dates:
-          <span>
-            {moment(dates.start_date).format("DD/MM/YYYY")} -{" "}
-            {moment(dates.end_date).format("DD/MM/YYYY")}
-          </span>
-        </b>
+        Dates:
+        <span>
+          {moment(dates.start_date).format("DD/MM/YYYY")} -{" "}
+          {moment(dates.end_date).format("DD/MM/YYYY")}
+        </span>
       </p>
       <div>
         <Link to={`/edit/${id}`}>
@@ -87,6 +82,7 @@ const CoursePage = () => {
       </div>
       <br />
       <br />
+      </div>
       <Footer style={{ bottom: "-50px" }} />
     </>
   );

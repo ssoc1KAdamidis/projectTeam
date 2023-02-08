@@ -9,7 +9,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const EditForm = () => {
   const { id } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
     title: "",
     description: "",
@@ -29,6 +29,7 @@ const EditForm = () => {
   useEffect(() => {
     async function fetchData() {
       const data = await fetchCourse(id);
+      const check = setIsChecked(data.online)
       setFormValues({
         title: data.title,
         description: data.description,
@@ -37,13 +38,14 @@ const EditForm = () => {
           early_bird: data.price.early_bird,
           normal: data.price.normal,
         },
-        online: setIsChecked(data.online),
+        online: check,
         dates: {
           start_date: data.dates.start_date,
           end_date: data.dates.end_date,
         },
         imagePath: data.imagePath,
       });
+      console.log(check)
     }
     fetchData();
   }, [id]);
@@ -77,12 +79,12 @@ const EditForm = () => {
     e.preventDefault();
     formValues.online = isChecked;
     await editCourse(formValues, id);
-    navigate(`/courses/${id}`)
+    navigate(`/courses/${id}`);
   };
 
-  const [isChecked, setIsChecked] = useState();
-  const handleCheckboxChange = (e) => {
-    setIsChecked(e.target.checked);
+  const [isChecked, setIsChecked] = useState(false);
+  const handleCheckboxChange = () => {
+    setIsChecked(!isChecked);
   };
 
   /* 

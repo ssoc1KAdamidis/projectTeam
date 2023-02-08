@@ -151,19 +151,19 @@
       "id": "5Kg572q"
     },
     {
-      "title": "- Edit -",
-      "description": "Edit",
-      "duration": "3 months",
+      "title": "",
+      "description": "",
+      "duration": "",
       "price": {
-        "early_bird": 300,
-        "normal": 500
+        "early_bird": 0,
+        "normal": 0
       },
-      "online": false,
+      "online": true,
       "dates": {
-        "start_date": "2023-02-17",
-        "end_date": "2023-05-17"
+        "start_date": "",
+        "end_date": ""
       },
-      "imagePath": "https://as2.ftcdn.net/v2/jpg/03/42/37/93/1000_F_342379310_FxjYQTbWRNPRb79iRnpIPDAQj2BHzIy5.jpg",
+      "imagePath": "",
       "id": "NB8mmzK"
     }
   ]

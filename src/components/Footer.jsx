@@ -1,3 +1,7 @@
-const Footer = () => <footer>Copyright 2023</footer>;
+const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
+    return <footer>Copyright {currentYear}</footer>;
+}
 
 export default Footer;
