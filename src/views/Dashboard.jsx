@@ -11,12 +11,15 @@ const Dashboard = () => {
   return (
     <>
       <NavBar />
-      <Title className="dashboard-title">
-        Welcome to our Dashboard
-      </Title>
+      <br />
+      <Title className="dashboard-title">Welcome to our Dashboard</Title>
+      <br />
+      <br />
+      <br />
       <div>
         <StatsList url={process.env.REACT_APP_API_URL} resource="stats" />
-        <br/>
+        <br />
+        <br />
       </div>
       <div>
         <CourseTable url={process.env.REACT_APP_API_URL} resource="courses" />

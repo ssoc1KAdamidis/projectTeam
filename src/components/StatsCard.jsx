@@ -9,7 +9,11 @@ const StatsCard = ({ id, title, amount }) => {
         <Button
           size="small"
           type="primary"
-          style={{ color: "white", marginRight: "65px", backgroundColor: "black" }}
+          style={{
+            color: "white",
+            marginRight: "65px",
+            backgroundColor: "black",
+          }}
         >
           {amount}
         </Button>

@@ -1,39 +1,38 @@
-import React from 'react'
+import React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "./views/Dashboard";
 import Courses from "./views/Courses";
 import NewCourse from "./views/NewCourse";
 import EditCourse from "./views/EditCourse";
 import CoursePage from "./views/CoursePage";
-import ErrorPage from './views/ErrorPage';
+import ErrorPage from "./views/ErrorPage";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Dashboard />,
-      errorElement: <ErrorPage/>,
-    },
-    {
-      path: "courses",
-      element: <Courses />,
-      errorElement: <ErrorPage/>,
-    },
-    {
-      path: "courses/:id",
-      element: <CoursePage />,
-      errorElement: <ErrorPage/>,
-    },
-    {
-      path: "new",
-      element: <NewCourse />,
-      errorElement: <ErrorPage/>,
-    },
-    {
-      path: "edit/:id",
-      element: <EditCourse />,
-      errorElement: <ErrorPage/>,
-    }
-  ]);
-  
-  export default router;
-  
+  {
+    path: "/",
+    element: <Dashboard />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "courses",
+    element: <Courses />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "courses/:id",
+    element: <CoursePage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "new",
+    element: <NewCourse />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "edit/:id",
+    element: <EditCourse />,
+    errorElement: <ErrorPage />,
+  },
+]);
+
+export default router;

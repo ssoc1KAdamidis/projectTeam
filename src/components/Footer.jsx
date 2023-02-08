@@ -1,7 +1,7 @@
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-    return <footer>Copyright {currentYear}</footer>;
-}
+  return <footer>Copyright {currentYear}</footer>;
+};
 
 export default Footer;

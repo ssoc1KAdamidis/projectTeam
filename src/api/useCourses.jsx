@@ -15,7 +15,6 @@ const useCourses = ({ url, resource, id }) => {
       .then((data) => {
         setCourses(data);
         setIsLoading(false);
-        //console.log(data);
       })
       .catch((error) => {
         console.log(error);

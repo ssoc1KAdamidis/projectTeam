@@ -5,7 +5,6 @@ import { prepareCourseForm } from "../utilities/form.jsx";
 import { prepareDatesForm } from "../utilities/form.jsx";
 import { editCourse, fetchCourse } from "../api/fetch.jsx";
 import { useParams, useNavigate } from "react-router-dom";
-/* import axios from 'axios'; */
 
 const EditForm = () => {
   const { id } = useParams();
@@ -29,7 +28,7 @@ const EditForm = () => {
   useEffect(() => {
     async function fetchData() {
       const data = await fetchCourse(id);
-      const check = setIsChecked(data.online)
+      const check = setIsChecked(data.online);
       setFormValues({
         title: data.title,
         description: data.description,
@@ -45,20 +44,12 @@ const EditForm = () => {
         },
         imagePath: data.imagePath,
       });
-      console.log(check)
+      console.log(check);
     }
     fetchData();
   }, [id]);
 
-  const {
-    title,
-    description,
-    duration,
-    online,
-    imagePath,
-    dates: { start_date, end_date },
-    price: { early_bird, normal },
-  } = formValues;
+  const { title, description, duration, online, imagePath, dates: { start_date, end_date }, price: { early_bird, normal }, } = formValues;
 
   const handleEdit = (e) => {
     setFormValues({
@@ -86,17 +77,6 @@ const EditForm = () => {
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
-
-  /* 
-  const [file, setFile] = useState('');
-
-  const handleUpload = async (e) => {
-    setFile(e.target.files[0]);
-    e.preventDefault(); 
-    const formData = new FormData();
-    formData.append('imagePath', file);
-    }    
-*/
 
   return (
     <>
@@ -182,6 +162,7 @@ const EditForm = () => {
             id="early_bird"
             name="early_bird"
             type="number"
+            min="0"
             value={early_bird}
             onChange={handleEdit}
           />
@@ -193,6 +174,7 @@ const EditForm = () => {
             id="normal"
             name="normal"
             type="number"
+            min="0"
             value={normal}
             onChange={handleEdit}
           />
@@ -226,24 +208,6 @@ const EditForm = () => {
         </label>
         <br />
         <br />
-        {/*
-      <label>
-      Image:
-      <input
-          type="file"
-          name="imagePath"
-          value={imagePath}
-          accept="image/*"
-          onChange={handleUpload}
-      />
-      <br />
-      <br />
-      <button onClick={handleUpload}>Upload Image</button>
-      </label>
-      <br />
-      <br />
-      <br />
-      */}
         <button type="submit">Save Course</button>
       </form>
       <Footer />

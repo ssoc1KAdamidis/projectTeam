@@ -1,6 +1,5 @@
 import React from "react";
 import { Table } from "antd";
-/* import { Button } from "antd"; */
 import useCourses from "../api/useCourses";
 import moment from "moment";
 import { Link } from "react-router-dom";
@@ -50,7 +49,7 @@ const CourseTable = ({ url, resource }) => {
       render: (id) => {
         return (
           <Link to={`courses/${id}`}>
-            <button /*style={{backgroundColor: "#ccc" }}*/>View Details</button>
+            <button>View Details</button>
           </Link>
         );
       },
@@ -64,7 +63,8 @@ const CourseTable = ({ url, resource }) => {
       pagination={false}
       loading={isLoading}
       rowKey={(record) => record.id}
-      className="courses-table">
+      className="courses-table"
+    >
     </Table>
   );
 };

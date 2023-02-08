@@ -9,14 +9,12 @@ body {
   font-size: small; 
 }
 
-
-.dashboard-title{
-  font-size: 25px;
-  font-weight: bold; /* bold is available in font-weight NOT font-style */
+.dashboard-title {
+  font-size: 15px;
+  font-weight: bold; 
   font-family: 'Courier new';
   margin: 50px;
 }
-
 
 .courses-table {
   background-color:white;
@@ -25,37 +23,35 @@ body {
   width: 97%;
   margin-left: 25px;
   margin-right: 25px;
-  
 }
 
-.stats-card-container{
+.stats-card-container {
   display: flex;
   justify-content: space-evenly;
-  font-size: small;
-  
+  font-size: small;  
 }
 
-.stats-card{
+.stats-card {
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: small;
 }
 
-.course-card-container{
+.course-card-container {
   font-weight: bold;
 }
-.course-page-container{
-  font-weight: bold;
 
+.course-page-container {
+  font-weight: bold;
 }
 
-.image-course-card{
+.image-course-card {
   width: 1200px;
-  height: 750px;
+  height: 700px;
 }
 
-.container{
+.container {
   text-align: center;
   display: grid;  
   height: 300px;
@@ -63,15 +59,12 @@ body {
   width: 275px;
   float: left;
   margin-left: 12px;
-  font-size: small;
-  
+  font-size: small; 
 }
 
-#error-page{
+#error-page {
   text-align: center;
 }
-
-
 
 input {
   width: 100%;
@@ -116,16 +109,17 @@ button:hover {
   background-color: rgba(191, 181, 195, 0.907); 
   color: black;
 }
-.Navbar{
+
+.Navbar {
   background-color: #ccc;
   font-size: small;
   font-weight: bold;
   position: fixed;
   top: 0;
   width: 100%;
-  
 }
-.navbar-link{
+
+.navbar-link {
  margin: 0px;
 }
 
@@ -165,28 +159,21 @@ footer {
   font-size: small;
 }
 
-/* not working perfectly on course page & courses */
-
-
 /*
 input[type='date'] .selected {
-  accent-color: black;
-  
+  accent-color: black; 
 }
 
 input[type="date"] .select {
   accent-color: black;
-  
 }
 
 input[type="date"] .focus {
   accent-color: black;
-
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
   accent-color: black;
-
 }
 
 .date-edit-field:not([disabled="true"]):focus {

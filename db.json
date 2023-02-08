@@ -149,6 +149,22 @@
       },
       "imagePath": "/courses/unity.jpg",
       "id": "5Kg572q"
+    },
+    {
+      "title": "- Edit -",
+      "description": "Edit",
+      "duration": "3 months",
+      "price": {
+        "early_bird": 300,
+        "normal": 500
+      },
+      "online": false,
+      "dates": {
+        "start_date": "2023-02-17",
+        "end_date": "2023-05-17"
+      },
+      "imagePath": "https://as2.ftcdn.net/v2/jpg/03/42/37/93/1000_F_342379310_FxjYQTbWRNPRb79iRnpIPDAQj2BHzIy5.jpg",
+      "id": "NB8mmzK"
     }
   ]
 }
