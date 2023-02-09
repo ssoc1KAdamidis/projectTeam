@@ -83,9 +83,12 @@ const EditForm = () => {
       <NavBar />
       <br />
       <br />
-      <h1>
-        <b>Edit Course</b>
-      </h1>
+      <br />
+      <div className="edit-course">
+       <div>
+        <h5>Edit Course</h5>
+       </div>
+      </div>
       <br />
       <br />
       <form onSubmit={handleSubmit}>

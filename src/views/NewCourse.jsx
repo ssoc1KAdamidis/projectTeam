@@ -62,12 +62,15 @@ const NewCourse = () => {
 
   return (
     <>
-      <br />
       <NavBar />
       <br />
-      <h1>
-        <b>Add a new Course</b>
-      </h1>
+      <br />
+      <br />
+      <div className="add-course">
+       <div>
+        <h5>Add a new Course</h5>
+       </div>
+      </div>
       <br />
       <br />
       <form onSubmit={handleSubmit}>

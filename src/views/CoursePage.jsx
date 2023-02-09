@@ -33,7 +33,7 @@ const CoursePage = () => {
         <br />
         <br />
         <div>
-          <h4>{title}</h4>
+          <h5>{title}</h5>
         </div>
         <br />
         <br />

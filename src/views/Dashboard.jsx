@@ -12,7 +12,7 @@ const Dashboard = () => {
     <>
       <NavBar />
       <br />
-      <Title className="dashboard-title">Welcome to our Dashboard</Title>
+      <Title className="dashboard-title"><h2>Welcome to our Dashboard</h2></Title>
       <br />
       <br />
       <br />
