@@ -81,16 +81,9 @@ const EditForm = () => {
   return (
     <>
       <NavBar />
-      <br />
-      <br />
-      <br />
-      <div className="edit-course">
        <div>
         <h5>Edit Course</h5>
        </div>
-      </div>
-      <br />
-      <br />
       <form onSubmit={handleSubmit}>
         <label>
           Title:
@@ -102,8 +95,6 @@ const EditForm = () => {
             onChange={handleEdit}
           />
         </label>
-        <br />
-        <br />
         <label>
           Description:
           <textarea
@@ -114,8 +105,6 @@ const EditForm = () => {
             onChange={handleEdit}
           />
         </label>
-        <br />
-        <br />
         <label>
           Duration:
           <input
@@ -126,12 +115,11 @@ const EditForm = () => {
             onChange={handleEdit}
           />
         </label>
-        <br />
-        <br />
         <label>
           Dates:
           <br />
           <label htmlFor="start_date">Start Date:</label>
+          <br />
           <input
             style={{ textAlign: "center" }}
             name="start_date"
@@ -142,8 +130,8 @@ const EditForm = () => {
             onChange={handleEditDates}
           />
           <br />
-          <br />
           <label htmlFor="end_date">End Date:</label>
+          <br />
           <input
             style={{ textAlign: "center" }}
             name="end_date"
@@ -154,12 +142,11 @@ const EditForm = () => {
             onChange={handleEditDates}
           />
         </label>
-        <br />
-        <br />
         <label>
           Price:
           <br />
           <label htmlFor="early_bird">Early bird price:</label>
+          <br />
           <input
             style={{ textAlign: "center" }}
             id="early_bird"
@@ -170,8 +157,8 @@ const EditForm = () => {
             onChange={handleEdit}
           />
           <br />
-          <br />
           <label htmlFor="normal">Normal price:</label>
+          <br />
           <input
             style={{ textAlign: "center" }}
             id="normal"
@@ -182,8 +169,6 @@ const EditForm = () => {
             onChange={handleEdit}
           />
         </label>
-        <br />
-        <br />
         <label>
           Online:
           <input
@@ -195,8 +180,6 @@ const EditForm = () => {
             onChange={handleCheckboxChange}
           />
         </label>
-        <br />
-        <br />
         <label>
           {/* not working without file extension */}
           Image:
@@ -209,8 +192,6 @@ const EditForm = () => {
             onChange={handleEdit}
           />
         </label>
-        <br />
-        <br />
         <button type="submit">Save Course</button>
       </form>
       <Footer />

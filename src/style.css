@@ -1,24 +1,37 @@
 * {
   font-size: small;
   font-family:'Courier New', Courier, monospace;
+  word-spacing: 1px;
 }
 
 body {
+  font-family:'Courier New', Courier, monospace;
   background: rgb(219, 215, 215);
   text-align: center;
   font-size: small; 
+  word-spacing: 1px;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
+form {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 }
 
 .dashboard-title {
   font-size: 15px; 
   font-weight: bold; 
   font-family: 'Courier new';
-  margin: 50px;
+  margin-bottom: 30px;
 }
 
 .courses-table {
-  background-color:white;
-  text-align: center;
+  background-color:white; /* not working */
+  text-align: center; /* not working */
   font-size: small;
   width: 97%;
   margin-left: 25px;
@@ -44,6 +57,7 @@ body {
 
 .course-page-container {
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .image-course-card {
@@ -55,7 +69,8 @@ body {
   text-align: center;
   display: grid;  
   height: 300px;
-  margin-top: 140px;
+  margin-top: 50px;
+  margin-bottom: 35px;
   width: 275px;
   float: left;
   margin-left: 12px;
@@ -72,6 +87,7 @@ input {
   border-color: #ccc;
   outline: none;
   accent-color: inherit;
+  margin-bottom: 20px;
 }
 
 textarea {
@@ -79,6 +95,7 @@ textarea {
   border: 1px solid;
   border-color:#ccc;
   outline: none;
+  margin-bottom: 20px;
 }
 
 select {
@@ -90,6 +107,16 @@ select {
   accent-color:inherit;
 }
 
+input[type='number'] {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+input[type='date'] {
+  width: 130px;
+  margin-bottom: 20px;
+}
+
 button {
   width: 100px;
   overflow: hidden;
@@ -99,9 +126,14 @@ button {
   font-size: small;
   color: "black";
   opacity: 1.0;
+  margin-top: 10px;
 }
 
-h1, h3, p {
+h1, h2, h3, h5 {
+  margin: 20px;
+}
+
+p {
   margin: 10px;
 }
 
@@ -117,6 +149,7 @@ button:hover {
   position: fixed;
   top: 0;
   width: 100%;
+  margin: 0px;
 }
 
 .navbar-link {

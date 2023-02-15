@@ -8,7 +8,7 @@ const CourseCard = ({ id, title, price, duration, online, dates, imagePath, }) =
     <Card
       title={title}
       cover={
-        <img alt="course_image" src={imagePath} style={{ width: "450", height: "500" }} />
+        <img alt="Course" src={imagePath} style={{ width: "450", height: "500" }} />
       }
     >
       <div className="course-card-container">

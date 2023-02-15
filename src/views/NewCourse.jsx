@@ -63,16 +63,11 @@ const NewCourse = () => {
   return (
     <>
       <NavBar />
-      <br />
-      <br />
-      <br />
       <div className="add-course">
        <div>
         <h5>Add a new Course</h5>
        </div>
       </div>
-      <br />
-      <br />
       <form onSubmit={handleSubmit}>
         <label>
           Title:
@@ -84,9 +79,6 @@ const NewCourse = () => {
             onChange={handleInput}
           />
         </label>
-        <br />
-        <br />
-        <br />
         <label>
           Description:
           <textarea
@@ -97,9 +89,6 @@ const NewCourse = () => {
             onChange={handleInput}
           />
         </label>
-        <br />
-        <br />
-        <br />
         <label>
           Duration:
           <input
@@ -110,13 +99,11 @@ const NewCourse = () => {
             onChange={handleInput}
           />
         </label>
-        <br />
-        <br />
-        <br />
         <label>
           Dates:
           <br />
           <label htmlFor="start_date">Start Date:</label>
+          <br />
           <input
             style={{ textAlign: "center" }}
             name="start_date"
@@ -127,8 +114,8 @@ const NewCourse = () => {
             onChange={handleInputDates}
           />
           <br />
-          <br />
           <label htmlFor="end_date">End Date:</label>
+          <br />
           <input
             style={{ textAlign: "center" }}
             name="end_date"
@@ -139,13 +126,11 @@ const NewCourse = () => {
             onChange={handleInputDates}
           />
         </label>
-        <br />
-        <br />
-        <br />
         <label>
           Price:
           <br />
           <label htmlFor="early_bird">Early bird price:</label>
+          <br />
           <input
             style={{ textAlign: "center" }}
             id="early_bird"
@@ -156,8 +141,8 @@ const NewCourse = () => {
             onChange={handleInput}
           />
           <br />
-          <br />
           <label htmlFor="normal">Normal price:</label>
+          <br />
           <input
             style={{ textAlign: "center" }}
             id="normal"
@@ -168,9 +153,6 @@ const NewCourse = () => {
             onChange={handleInput}
           />
         </label>
-        <br />
-        <br />
-        <br />
         <label>
           Online:
           <input
@@ -181,9 +163,6 @@ const NewCourse = () => {
             onChange={handleCheckboxChange}
           />
         </label>
-        <br />
-        <br />
-        <br />
         <label>
           {/* not working without file extension */}
           Image:
@@ -196,13 +175,7 @@ const NewCourse = () => {
             onChange={handleInput}
           />
         </label>
-        <br />
-        <br />
-        <br />
-        <button type="submit">Add new Course <img src="./add.avif" alt="add_course" width="15px" /></button>
-        <br />
-        <br />
-        <br />
+        <button type="submit">Add new Course <img src="./add.avif" alt="Add course" width="15px" /></button>
       </form>
       <Footer />
     </>

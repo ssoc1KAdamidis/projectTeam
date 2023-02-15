@@ -11,17 +11,13 @@ const Dashboard = () => {
   return (
     <>
       <NavBar />
-      <br />
+      <div>
       <Title className="dashboard-title"><h2>Welcome to our Dashboard</h2></Title>
-      <br />
-      <br />
-      <br />
-      <div>
-        <StatsList url={process.env.REACT_APP_API_URL} resource="stats" />
-        <br />
-        <br />
       </div>
-      <div>
+      <div style={{marginTop: '50px'}}>
+        <StatsList url={process.env.REACT_APP_API_URL} resource="stats" />
+      </div>
+      <div style={{marginTop: '50px'}}>
         <CourseTable url={process.env.REACT_APP_API_URL} resource="courses" />
       </div>
       <Footer />
@@ -29,4 +25,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default Dashboard;          

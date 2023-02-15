@@ -29,27 +29,19 @@ const CoursePage = () => {
     <>
       <NavBar />
       <div className="course-page-container">
-        <br />
-        <br />
-        <br />
         <div>
           <h5>{title}</h5>
         </div>
-        <br />
-        <br />
-        <div>
+        <div style={{margin: '27px'}}>
           <img
             className="image-course-card"
             src={imagePath}
-            alt="course_image"
+            alt="Course"
             align="center"
           />
-        </div>
-        <hr />
-        <br />
-        <br />
+        </div>   
         <div>{description}</div>
-        <br />
+        <hr />
         <p>
           Price: {price.normal} <span>&euro;</span>
         </p>
@@ -67,16 +59,13 @@ const CoursePage = () => {
         </p>
         <div>
           <Link to={`/edit/${id}`}>
-            <button>Edit <img src="/edit.avif" alt="edit_course" width="15px" /></button>
+            <button>Edit <img src="/edit.avif" alt="Edit course" width="15px" /></button>
           </Link>
         </div>
-        <br />
         <div>
-          <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="delete_course" width="15px" /></button>
+          <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="Delete course" width="15px" /></button>
         </div>
-        <br />
-        <br />
-      </div>
+        </div>
       <Footer />
     </>
   );
