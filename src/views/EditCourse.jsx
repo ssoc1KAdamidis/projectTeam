@@ -28,7 +28,6 @@ const EditForm = () => {
   useEffect(() => {
     async function fetchData() {
       const data = await fetchCourse(id);
-      const check = setIsChecked(data.online);
       setFormValues({
         title: data.title,
         description: data.description,
@@ -37,18 +36,16 @@ const EditForm = () => {
           early_bird: data.price.early_bird,
           normal: data.price.normal,
         },
-        online: check,
+        online: data.online,
         dates: {
           start_date: data.dates.start_date,
           end_date: data.dates.end_date,
         },
         imagePath: data.imagePath,
       });
-      console.log(check);
     }
     fetchData();
   }, [id]);
-
   const { title, description, duration, online, imagePath, dates: { start_date, end_date }, price: { early_bird, normal }, } = formValues;
 
   const handleEdit = (e) => {
@@ -81,8 +78,8 @@ const EditForm = () => {
   return (
     <>
       <NavBar />
-       <div>
-        <h5>Edit Course</h5>
+       <div className="edit-course-title">
+        <h4>Edit Course</h4>
        </div>
       <form onSubmit={handleSubmit}>
         <label>

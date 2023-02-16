@@ -1,15 +1,13 @@
 * {
-  font-size: small;
-  font-family:'Courier New', Courier, monospace;
-  word-spacing: 1px;
+  font-size: medium;
+  font-family:'Roboto';
+  word-spacing: 2px;
 }
 
 body {
-  font-family:'Courier New', Courier, monospace;
   background: rgb(219, 215, 215);
   text-align: center;
   font-size: small; 
-  word-spacing: 1px;
   padding-top: 35px;
   padding-bottom: 15px;
 }
@@ -25,34 +23,40 @@ form {
 .dashboard-title {
   font-size: 15px; 
   font-weight: bold; 
-  font-family: 'Courier new';
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
 .courses-table {
-  background-color:white; /* not working */
-  text-align: center; /* not working */
   font-size: small;
-  width: 97%;
+  margin-top: 50px;
   margin-left: 25px;
   margin-right: 25px;
 }
 
 .stats-card-container {
-  display: flex;
+  display:flex;
+  margin-top: 50px;
   justify-content: space-evenly;
   font-size: small;  
 }
 
 .stats-card {
-  white-space: normal;
   overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: small;
+  width: 140px;
+}
+
+.stats-amount-container{
+  color: black;
+  border-radius: 5px;
+  background-color: goldenrod;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+  padding: 5px;
 }
 
 .course-card-container {
   font-weight: bold;
+  margin: 0px;
 }
 
 .course-page-container {
@@ -60,21 +64,51 @@ form {
   margin-bottom: 30px;
 }
 
+.course-page-title{
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
 .image-course-card {
-  width: 1200px;
-  height: 700px;
+  max-width: 1200px;
+  max-height: 700px;
+}
+
+.course-page-descr{
+  margin: 20px;
+  text-align: center;
+  
+}
+
+.course-page-buttons{
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.course-page-delete{
+  float: right;
+  margin-left: 10px;
+}
+
+.add-course-title{
+  margin-top: 40px;
+}
+
+.edit-course-title{
+  margin-top: 40px;
 }
 
 .container {
   text-align: center;
-  display: grid;  
+  display: block;  
   height: 300px;
-  margin-top: 50px;
-  margin-bottom: 35px;
+  margin-left: 30px;
+  margin-top: 60px;
+  margin-bottom: 100px;
   width: 275px;
   float: left;
-  margin-left: 12px;
-  font-size: small; 
 }
 
 #error-page {
@@ -121,12 +155,12 @@ button {
   width: 100px;
   overflow: hidden;
   border: none;
+  box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
   /* background-color: #ccc; */
-  background-color: rgba(179, 173, 182, 0.907);
+  background-color: goldenrod;
   font-size: small;
-  color: "black";
-  opacity: 1.0;
-  margin-top: 10px;
+  color: black;
+  padding: 10px;
 }
 
 h1, h2, h3, h5 {
@@ -150,15 +184,24 @@ button:hover {
   top: 0;
   width: 100%;
   margin: 0px;
+  z-index: 1;
 }
 
 .navbar-link {
- margin: 0px;
+ margin: 0;
+ font-size: 15px !important;
 }
 
+.navbar-title {
+  margin: 2px;
+  font-size: 23px !important; 
+ }
+
 .navbar-link:hover {
-  background-color: rgba(191, 181, 195, 0.907);
+  transform: translateX(3px) translateY(-1px);
   color: black;
+  border-radius: 4px;
+  background-color:rgba(191, 181, 195, 0.7);
 }
 
 a:link, a:visited, a:active, a {
@@ -182,7 +225,7 @@ input[type='checkbox'] {
 }
 
 footer {
-  background: #ccc;
+  background:rgb(187, 186, 186);
   color: black;
   text-align: center;
   position: fixed;

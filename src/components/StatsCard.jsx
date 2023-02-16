@@ -1,22 +1,14 @@
 import React from "react";
-import { Card, Button } from "antd";
+import { Card } from "antd";
 
 const StatsCard = ({ id, title, amount }) => {
   return (
     <div className="stats-card" key={id}>
       <Card size="small" bordered={false}>
         {title}:
-        <Button
-          size="small"
-          type="primary"
-          style={{
-            color: "white",
-            marginRight: "65px",
-            backgroundColor: "black",
-          }}
-        >
+        <div className="stats-amount-container">
           {amount}
-        </Button>
+        </div>
       </Card>
     </div>
   );

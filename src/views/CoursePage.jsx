@@ -29,42 +29,44 @@ const CoursePage = () => {
     <>
       <NavBar />
       <div className="course-page-container">
-        <div>
-          <h5>{title}</h5>
+        <div className="course-page-title">
+          {title}
         </div>
-        <div style={{margin: '27px'}}>
+       
           <img
-            className="image-course-card"
+            className="image-course-card container-fluid"
             src={imagePath}
             alt="Course"
             align="center"
           />
-        </div>   
-        <div>{description}</div>
+          
+        <div className="course-page-descr">{description}</div>
         <hr />
         <p>
-          Price: {price.normal} <span>&euro;</span>
+          Price: {price.normal}<span>&euro;</span>
         </p>
         <p>
-          Online:
+          Online:{" "}
           <span>{online ? <span>&#10003;</span> : <span>&#88;</span>}</span>
         </p>
         <p>Duration: {duration}</p>
         <p>
           Dates:
-          <span>
+          <span>{" "}
             {moment(dates.start_date).format("DD/MM/YYYY")} -{" "}
             {moment(dates.end_date).format("DD/MM/YYYY")}
           </span>
         </p>
-        <div>
-          <Link to={`/edit/${id}`}>
-            <button>Edit <img src="/edit.avif" alt="Edit course" width="15px" /></button>
-          </Link>
-        </div>
-        <div>
-          <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="Delete course" width="15px" /></button>
-        </div>
+        <div className="course-page-buttons">
+          
+            <Link to={`/edit/${id}`}>
+              <button>Edit <img src="/edit.avif" alt="Edit course" width="20px" /></button>
+            </Link>
+            <div className="course-page-delete">
+              <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="Delete course" width="20px" /></button>
+            </div>
+            
+          </div>
         </div>
       <Footer />
     </>

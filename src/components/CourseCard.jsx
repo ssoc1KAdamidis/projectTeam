@@ -13,12 +13,12 @@ const CourseCard = ({ id, title, price, duration, online, dates, imagePath, }) =
     >
       <div className="course-card-container">
         <p>
-          Price: {price.normal}&euro; | Online:
+          Price: {price.normal}&euro; | Online:{" "}
           {online ? <span>&#10003;</span> : <span>&#88;</span>}
         </p>
         <p>Duration: {duration}</p>
         <p>
-          Dates:
+          Dates:{" "}
           {moment(dates.start_date).format("DD/MM/YYYY")} -{" "}
           {moment(dates.end_date).format("DD/MM/YYYY")}
         </p>
