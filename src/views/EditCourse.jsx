@@ -79,7 +79,7 @@ const EditForm = () => {
     <>
       <NavBar />
        <div className="edit-course-title">
-        <h4>Edit Course</h4>
+        <h5>Edit Course</h5>
        </div>
       <form onSubmit={handleSubmit}>
         <label>

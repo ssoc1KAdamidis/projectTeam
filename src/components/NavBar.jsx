@@ -9,7 +9,7 @@ import { NavLink, Link } from "react-router-dom";
 const NavBar = () => {
   return (
     <Navbar className="Navbar" expand="lg">
-      <Navbar.Brand as={Link} to="/" className="navbar-title">Dashboard</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/" className="navbar-title" style={{margin: '5px'}}>Dashboard</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">

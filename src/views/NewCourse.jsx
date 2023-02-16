@@ -64,7 +64,7 @@ const NewCourse = () => {
     <>
       <NavBar />
       <div className="add-course-title">
-        <h4>Add a new Course</h4>
+        <h5>Add a new Course</h5>
       </div>
       <form onSubmit={handleSubmit}>
         <label>
@@ -173,7 +173,7 @@ const NewCourse = () => {
             onChange={handleInput}
           />
         </label>
-        <button type="submit">Add new Course <img src="./add.avif" alt="Add course" width="20px" /></button>
+        <button type="submit">Add new Course <img src="./add.avif" alt="Add course" width="15px"/ ></button>
       </form>
       <Footer />
     </>

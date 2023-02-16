@@ -30,7 +30,7 @@ const CoursePage = () => {
       <NavBar />
       <div className="course-page-container">
         <div className="course-page-title">
-          {title}
+          <h3>{title}</h3>
         </div>
        
           <img
@@ -60,10 +60,10 @@ const CoursePage = () => {
         <div className="course-page-buttons">
           
             <Link to={`/edit/${id}`}>
-              <button>Edit <img src="/edit.avif" alt="Edit course" width="20px" /></button>
+              <button>Edit <img src="/edit.avif" alt="Edit course" width="15px" /></button>
             </Link>
             <div className="course-page-delete">
-              <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="Delete course" width="20px" /></button>
+              <button onClick={() => handleDelete(id)}>Delete <img src="/delete.avif" alt="Delete course" width="15px" /></button>
             </div>
             
           </div>
