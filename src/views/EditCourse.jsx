@@ -87,6 +87,7 @@ const EditForm = () => {
           <input
             style={{ textAlign: "center" }}
             type="text"
+            id="title"
             name="title"
             value={title}
             onChange={handleEdit}
@@ -97,6 +98,7 @@ const EditForm = () => {
           <textarea
             style={{ textAlign: "center" }}
             type="text"
+            id="description"
             name="description"
             value={description}
             onChange={handleEdit}
@@ -107,43 +109,42 @@ const EditForm = () => {
           <input
             style={{ textAlign: "center" }}
             type="text"
+            id="duration"
             name="duration"
             value={duration}
             onChange={handleEdit}
           />
         </label>
-        <label>
+        <div className="input_dates">
           Dates:
-          <br />
           <label htmlFor="start_date">Start Date:</label>
-          <br />
           <input
             style={{ textAlign: "center" }}
             name="start_date"
+            id="start_date"
             type="date"
             min="2023-02-01"
             max="2031-02-01"
             value={start_date}
             onChange={handleEditDates}
           />
-          <br />
-          <label htmlFor="end_date">End Date:</label>
-          <br />
-          <input
+          </div>
+          <div className="input_dates">
+           <label htmlFor="end_date">End Date:</label>
+           <input
             style={{ textAlign: "center" }}
             name="end_date"
+            id="end_date"
             type="date"
             min="2023-02-01"
             max="2031-02-01"
             value={end_date}
             onChange={handleEditDates}
-          />
-        </label>
-        <label>
+           />
+          </div>
+        <div className="input_prices">
           Price:
-          <br />
           <label htmlFor="early_bird">Early bird price:</label>
-          <br />
           <input
             style={{ textAlign: "center" }}
             id="early_bird"
@@ -153,9 +154,9 @@ const EditForm = () => {
             value={early_bird}
             onChange={handleEdit}
           />
-          <br />
+         </div>
+         <div className="input_prices">
           <label htmlFor="normal">Normal price:</label>
-          <br />
           <input
             style={{ textAlign: "center" }}
             id="normal"
@@ -165,7 +166,7 @@ const EditForm = () => {
             value={normal}
             onChange={handleEdit}
           />
-        </label>
+        </div>
         <label>
           Online:
           <input
@@ -184,6 +185,7 @@ const EditForm = () => {
             style={{ textAlign: "center" }}
             type="text"
             placeholder="http://myimage.jpg"
+            id="imagePath"
             name="imagePath"
             value={imagePath}
             onChange={handleEdit}

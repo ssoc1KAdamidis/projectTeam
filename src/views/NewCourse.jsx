@@ -72,6 +72,7 @@ const NewCourse = () => {
           <input
             style={{ textAlign: "center" }}
             type="text"
+            id="title"
             name="title"
             value={title}
             onChange={handleInput}
@@ -82,6 +83,7 @@ const NewCourse = () => {
           <textarea
             style={{ textAlign: "center" }}
             type="text"
+            id="description"
             name="description"
             value={description}
             onChange={handleInput}
@@ -92,18 +94,18 @@ const NewCourse = () => {
           <input
             style={{ textAlign: "center" }}
             type="text"
+            id="duration"
             name="duration"
             value={duration}
             onChange={handleInput}
           />
         </label>
-        <label>
+        <div className="input_dates">
           Dates:
-          <br />
           <label htmlFor="start_date">Start Date:</label>
-          <br />
           <input
             style={{ textAlign: "center" }}
+            id="start_date"
             name="start_date"
             type="date"
             min="2023-02-01"
@@ -111,11 +113,12 @@ const NewCourse = () => {
             value={start_date}
             onChange={handleInputDates}
           />
-          <br />
+         </div>
+         <div className="input_dates">
           <label htmlFor="end_date">End Date:</label>
-          <br />
           <input
             style={{ textAlign: "center" }}
+            id="end_date"
             name="end_date"
             type="date"
             min="2023-02-01"
@@ -123,12 +126,10 @@ const NewCourse = () => {
             value={end_date}
             onChange={handleInputDates}
           />
-        </label>
-        <label>
+        </div>
+        <div className="input_prices">
           Price:
-          <br />
           <label htmlFor="early_bird">Early bird price:</label>
-          <br />
           <input
             style={{ textAlign: "center" }}
             id="early_bird"
@@ -138,9 +139,9 @@ const NewCourse = () => {
             value={early_bird}
             onChange={handleInput}
           />
-          <br />
+        </div>
+        <div className="input_prices">
           <label htmlFor="normal">Normal price:</label>
-          <br />
           <input
             style={{ textAlign: "center" }}
             id="normal"
@@ -150,12 +151,13 @@ const NewCourse = () => {
             value={normal}
             onChange={handleInput}
           />
-        </label>
+        </div>
         <label>
           Online:
           <input
             type="checkbox"
             checked={isChecked}
+            id="online"
             name="online"
             value={online}
             onChange={handleCheckboxChange}
@@ -168,16 +170,18 @@ const NewCourse = () => {
             style={{ textAlign: "center" }}
             type="text"
             placeholder="http://myimage.jpg"
+            id="imagePath"
             name="imagePath"
             value={imagePath}
             onChange={handleInput}
           />
         </label>
-        <button type="submit">Add new Course <img src="./add.avif" alt="Add course" width="15px"/ ></button>
+        <button type="submit">Add new Course <img src="./add.avif" alt="Add course" width="15px"/></button>
       </form>
       <Footer />
     </>
   );
 };
+
 
 export default NewCourse;
